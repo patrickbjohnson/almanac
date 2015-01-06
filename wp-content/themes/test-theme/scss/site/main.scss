@@ -1,0 +1,34 @@
+// bower:scss
+// endbower
+@import 'base/variables';
+@import 'helpers/functions';
+@import 'helpers/mixins';
+@import 'helpers/helpers';
+
+@import 'base/reset';
+@import 'base/base';
+@import 'base/typography';
+
+// reusable components
+@import 'components/blocks';
+@import 'components/icons';
+@import 'components/nav';
+@import 'components/path';
+@import 'components/section-grid';
+@import 'components/social';
+
+// page sections
+@import 'sections/computation';
+@import 'sections/finale';
+@import 'sections/globe';
+@import 'sections/intro';
+@import 'sections/new-approach';
+@import 'sections/new-computation';
+@import 'sections/new-vision';
+@import 'sections/resources';
+@import 'sections/footer';
+
+// IE and media queries. 
+@import 'helpers/ie';
+@import 'components/media-queries';
+

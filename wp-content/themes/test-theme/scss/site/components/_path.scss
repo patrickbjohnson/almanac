@@ -1,0 +1,19 @@
+.path {
+  position: absolute;
+  margin: auto;
+  // I've had to adjust this between computers
+  // Not sure why...
+  // this changes because of the IBM style sheet...
+  // top: 760px;
+  top: 559px;
+  right: 0;
+  left: 0;
+  width: 1024px;
+  height: 5150px;
+  // this sets the scale of the line.
+  // increasing this slightly offsets the positioning
+  // of everything else
+  // with out it the shit is thick as hell
+  z-index: z(base-5);
+  pointer-events: none; // makes it easier to debug all the stuff around it
+}
