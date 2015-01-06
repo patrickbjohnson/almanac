@@ -1,16 +1,43 @@
 <?php get_header(); ?>
 
-<div class="row">
-	<div class="small-12 large-8 columns" role="main">
+<section class="full full-gallery bg-placeholder">
+	<div class="row ">
+		<div class="small-12 medium-12 large-12">
+			<h1>Hero Gallery Slider</h1>
+			<p>Hero image gallery goes here as a slider</p>	
+			<p>Text overlays and is put in a different position as each slide displays</p>
+		</div>
+	</div>
+</section>
+<section class="full reserve">
+	<div class="row">
+		<div class="small-12 medium-12 large-12">
+			<a class="button large"href="#">Reserve Now</a>
+			<p>restuart address from ACF</p>
+			<div id="map-canvas">
+				google map with custom google drop
+			</div>
+		</div>
+	</div class="row">
+</section>
+<section class="about">
+	<div class="row">
+		<div class="small-12 medium-12 large-12">
+			<h1>About Us</h1>
+			<small>dont forget the hr graphic</small>
+			<hr>
+			<p>ACF custom field on the home page template</p>
+		</div>
+	</div>
+</section>
+
 
 	<?php do_action('foundationPress_before_content'); ?>
 
 	<?php while (have_posts()) : the_post(); ?>
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<header>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			</header>
-			<?php do_action('foundationPress_page_before_entry_content'); ?>
+		<article <?php post_class() ?> id="page-<?php the_ID(); ?>">
+			
+
 			<div class="entry-content">
 				<?php the_content(); ?>
 			</div>
@@ -18,15 +45,10 @@
 				<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'FoundationPress'), 'after' => '</p></nav>' )); ?>
 				<p><?php the_tags(); ?></p>
 			</footer>
-			<?php do_action('foundationPress_page_before_comments'); ?>
-			<?php comments_template(); ?>
-			<?php do_action('foundationPress_page_after_comments'); ?>
+			
 		</article>
 	<?php endwhile;?>
-
 	<?php do_action('foundationPress_after_content'); ?>
 
-	</div>
-	<?php get_sidebar(); ?>
-</div>
-<?php get_footer(); ?>
+	
+<?php get_footer(); echo 'page.php';?>

@@ -21,8 +21,8 @@ get_header(); ?>
 			</footer>
 			<?php comments_template(); ?>
 		</article>
-	<?php endwhile; // End the loop ?>
-
+	<?php endwhile; echo 'page-full.php'; // End the loop ?>
+	
 	</div>
 </div>
 
