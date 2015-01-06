@@ -1,0 +1,7 @@
+@function em($px, $base: $font-size-base){
+	@return ($px / $base) * 1em;
+}
+
+@function z($layer){
+	@return map-get($z-layers, $layer);
+}

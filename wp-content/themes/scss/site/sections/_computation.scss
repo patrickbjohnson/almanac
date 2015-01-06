@@ -1,0 +1,77 @@
+.computation	{
+  height: 742px;
+  
+  .left {
+    @include abs(265px 0 0 0);
+    width: 470px;
+    margin-left: 175px;
+    overflow: hidden;
+    z-index: z(base-5);
+
+    p { width: 280px;
+      margin-top: 10px;
+    }
+  }
+
+  .right {
+    @include rel(420px 0 0 485px);
+    width: 300px;
+    margin-left: 5px;
+    overflow: hidden;
+  }
+  
+  .lt-copy, 
+  .rt-copy {position: relative;}
+  .lt-copy {
+    width: 360px;
+
+    p {width: 270px;}
+  }
+}
+
+.circuit {
+  &-left-bg {
+    @include abs(0 0 -140px -60px);
+    width: 531px;
+    height: 628px;
+  } 
+  &-right-bg {
+    top: -28px;
+    right: 25px;
+    position: absolute;
+    width: 420px;
+  }
+  &-right-xs {
+    @include abs(391px 0px 0 0);
+    width: 140px;
+    z-index: z(base);
+  }
+
+  &-right-sm {
+    @include abs(0  94px 40px 0);
+    width: 253px;
+    height: 188px;
+  }
+  .circuit-connector {
+    @include abs(522px 5px 0 0);
+    width: 133px;
+    height: 470px;
+
+  }
+}
+
+.microchip-bg {
+  &-lg {
+    @include abs(-53px 0 0 263px);
+    width: 275px;
+    height: 261px;
+    margin: auto;
+    z-index: 1;
+  }
+
+  &-sm {
+    @include abs(25px 0 0 -20px);
+    width: 215px;
+    height: 210px;
+  }
+}

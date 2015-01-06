@@ -1,0 +1,16 @@
+.icon-down,
+.icon-up {
+	margin: auto;
+	color: $white;
+	border-radius: 50%;
+	z-index: z(base-10);
+}
+.icon-down {
+  position: relative;
+}
+.icon-up {
+  position: relative;
+	display: inline-block;
+  top: -25px;
+  margin: auto;
+}

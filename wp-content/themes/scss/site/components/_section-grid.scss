@@ -1,0 +1,55 @@
+.section-grid {
+  @include clear;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+  background: $gradient-start;
+  background: rgba(227,237,244,1);
+  background: -moz-linear-gradient(top, rgba(227,237,244,1) 0%, rgba(113,167,201,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(227,237,244,1)), color-stop(100%, rgba(113,167,201,1)));
+  background: -webkit-linear-gradient(top, rgba(227,237,244,1) 0%, rgba(113,167,201,1) 100%);
+  background: -o-linear-gradient(top, rgba(227,237,244,1) 0%, rgba(113,167,201,1) 100%);
+  background: -ms-linear-gradient(top, rgba(227,237,244,1) 0%, rgba(113,167,201,1) 100%);
+  background: linear-gradient(to bottom, rgba(227,237,244,1) 0%, rgba(113,167,201,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3edf4', endColorstr='#71a7c9', GradientType=0 );
+}
+
+.section-grid-header {margin: auto;}
+
+.section-grid.grid-lg {
+  display: block;
+  margin: auto;
+  width: 850px;
+  z-index: z(base-5);
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.grid-col {
+	float: left;
+  width: 33%;
+  padding: 2em 1em;
+  
+  &-content {
+    position: relative;
+    width: 195px;
+    height: 150px;
+    margin: auto;
+  }
+
+  h2 {margin: 15px auto;}
+  p {line-height: 1.5}
+}
+
+
+.new-vision .grid-col h2 {color: $l-blue1;}  
+.new-approach .grid-col {
+  h2 {color: $white;}
+  padding: 1.35em 1em;
+}
+
+
+
+
+
