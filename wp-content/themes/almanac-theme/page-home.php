@@ -7,7 +7,7 @@
 // Code to display Page goes here...
 ?>
 <?php get_header(); ?>
-
+<?php the_title();?>
 <section class="full full-gallery bg-placeholder">
 	<div class="row ">
 		<div class="small-12 medium-12 large-12">

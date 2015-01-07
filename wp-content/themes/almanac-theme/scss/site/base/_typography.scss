@@ -1,6 +1,6 @@
 body, .copy, %copy  {
-	font-family: sans-serif;
-	line-height: 1.5;
+  font-family: sans-serif;
+  line-height: 1.5;
   font-size: 1em;
 }
 
@@ -11,31 +11,22 @@ h1,h2,h3,h4,h5,h6, %header {
   text-shadow: none;
 }
 
-p {
-  font-size: 13px;
-  line-height: 1.4;
-  -webkit-backface-visibility: hidden;
+h1 {
+  font-size: 1.625em;
+  @media #{$medium-up} {
+    font-size: 1.875em;
+  }
 }
+
+h2 {
+  font-size: 1.250em;
+  @media #{medium-up}{
+    font-size: 1.625em;
+  }
+}
+
+p {-webkit-backface-visibility: hidden;}
 a {cursor: pointer;}
 a:hover {text-decoration: none;}
-
- %huge {
-	font-size: 30px;
-    line-height: 1.1;
-}
-
-%big {font-size: em(26px);}
-
-h1 { @extend %huge;}
-h2 { @extend %big; }
-
-strong, .bold, %bold {
-  @extend %lubalin;
-  font-size: 1.2em;
-  display: block;
-}
-
-
-
-
-small, .small { font-size: em(12px); }
+q {display: block;}
+cite {display: block;}

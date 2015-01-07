@@ -32,12 +32,8 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-	<?php do_action('foundationPress_after_body'); ?>
 	
-	<div class="off-canvas-wrap" data-offcanvas>
-	<div class="inner-wrap">
 	
-	<?php do_action('foundationPress_layout_start'); ?>
 	<div class="main-nav">
 	 <?php main_navigation_left(); ?>
 		<a class="logo nav-toggle mobile-only" href="#">Almanac</a>
@@ -45,7 +41,3 @@
 		<a href="#" class="desktop-only"><h1>Almanac</h1></a>
 	</div>
 
-<section class="container" role="document">
-	<!-- header thing -->
-	<?php do_action('foundationPress_after_header'); ?>
-	<!-- header thing -->

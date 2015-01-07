@@ -1,8 +1,8 @@
-</section>
+
 <footer class="full">
 	<h1>footer logo with full bleed border</h1>
 	<div class="row">
-		<div class="small-12 medium-12 large-12">
+		<div class="small-12 medium-centered medium-6 large-centered large-6 columns">
 			<ul class="social">
 				<li>facebook</li>
 				<li>instagram</li>

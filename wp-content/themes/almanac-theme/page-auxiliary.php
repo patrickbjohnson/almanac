@@ -8,6 +8,7 @@
 ?>
 <?php get_header(); ?>
 <h1>Auxiliary page template</h1>
+<?php the_title();?>
 <section class="full full-gallery bg-placeholder">
 	<div class="row ">
 		<div class="small-12 medium-12 large-12">
