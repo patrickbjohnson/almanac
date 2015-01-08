@@ -25,11 +25,15 @@
 
 	$args = array( 'post_type' => 'almanac_menu', 'posts_per_page' => 10 );
 	$loop = new WP_Query( $args );
+
 	while ( $loop->have_posts() ) : $loop->the_post();
-	  the_title();
-	  echo '<div class="entry-content">';
-	  the_content();
-	  echo '</div>';
+		$menu = get_field('dish_menu')[0];
+		if ($menu == 'three course'){
+			the_title();
+			the_content();
+		} else {
+			echo 'no content';
+		}
 	endwhile;
 	?>
 
