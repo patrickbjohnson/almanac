@@ -18,8 +18,29 @@
 		</div>
 	</div>
 </section>
+
+
+
+	<?php 
+
+	$args = array( 'post_type' => 'almanac_menu', 'posts_per_page' => 10 );
+	$loop = new WP_Query( $args );
+	while ( $loop->have_posts() ) : $loop->the_post();
+	  the_title();
+	  echo '<div class="entry-content">';
+	  the_content();
+	  echo '</div>';
+	endwhile;
+	?>
+
+
+
+
+
+
 <section class="menu three-course">
 	<div class="row">
+		<?php the_field('dish_description');?>
 		<h1>Three Course Tasting Menu</h1>
 		<h2>75</h2>
 		<div class="small-12 medium-4 large-4 columns">
@@ -73,8 +94,10 @@
 </section>
 
 
+<?php 
 
-	<?php while (have_posts()) : the_post(); ?>
+
+	while (have_posts()) : the_post(); ?>
 		<article <?php post_class() ?> id="page-<?php the_ID(); ?>">
 			
 
@@ -88,7 +111,9 @@
 			
 		</article>
 	<?php endwhile;?>
-	<?php do_action('foundationPress_after_content'); ?>
+
+	
+	
 
 	
 <?php get_footer(); echo 'page-menu.php';?>
