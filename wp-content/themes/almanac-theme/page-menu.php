@@ -20,62 +20,116 @@
 </section>
 
 
-<?php 
-
-	$args = array( 'post_type' => 'almanac_menu', 'posts_per_page' => 10 );
-	$loop = new WP_Query( $args ); ?>
-	<? if ($loop->have_posts()) :?> 
-	<h1>hello</h1>
-	<?while ($loop->have_posts()) : $loop->the_post(); ?>
+<section class="menu three-course">
+	<div class="row">
+		<h1>Three Course Tasting Menu</h1>
+		<h2>75</h2>
+		<div class="small-12 medium-4 large-4 columns">
+			<h2>Appetizer</h2>
+			<span class="menu-subtitle">choice of</span>
 			<?php 
-			$menu = get_field('dish_menu')[0];
-			$args = array('taxonomy' => 'category');
-			?>
+			$args = array( 'post_type' => 'almanac_menu');
+			$loop = new WP_Query( $args );
+
+			if ($loop->have_posts()) : 
+				while ($loop->have_posts()) : 
+					$loop->the_post(); ?>
+					<?php 
+					$menu = get_field('dish_menu')[0]; 
+					$cats = get_the_category(); 
+					$slug = $cats[0]->slug;
+					if ($menu == 'three') :?>
+						<?php if ($slug == 'app') :?>
+							<h1><?php the_title();?></h1>
+							<h1><?php the_content();?></h1>
+						<?php endif;?>
+					<?php endif;?>
+				<?php endwhile ;?>
+			<?php else : ?>
+				<p>no 3 course apps here</p>
+			<?php endif ;?>
+		</div>
+		<div class="small-12 medium-4 large-4 columns">
+			<h2>Main</h2>
+			<span class="menu-subtitle">choice of</span>
+			<?php 
+			$args = array( 'post_type' => 'almanac_menu');
+			$loop = new WP_Query( $args );
+
+			if ($loop->have_posts()) : 
+				while ($loop->have_posts()) : 
+					$loop->the_post(); ?>
+					<?php 
+					$menu = get_field('dish_menu')[0]; 
+					$cats = get_the_category(); 
+					$slug = $cats[0]->slug;
+					if ($menu == 'three') :?>
+						<?php if ($slug == 'main') :?>
+							<h1><?php the_title();?></h1>
+							<h1><?php the_content();?></h1>
+						<?php endif;?>
+					<?php endif;?>
+				<?php endwhile ;?>
+			<?php else : ?>
+				<p>no 3 course apps here</p>
+			<?php endif ;?>
+		</div>
+		<div class="small-12 medium-4 large-4 columns">
+			<h2>Dessert</h2>
+			<span class="menu-subtitle">choice of</span>
+			<?php 
+			$args = array( 'post_type' => 'almanac_menu');
+			$loop = new WP_Query( $args );
+
+			if ($loop->have_posts()) : 
+				while ($loop->have_posts()) : 
+					$loop->the_post(); ?>
+					<?php 
+					$menu = get_field('dish_menu')[0]; 
+					$cats = get_the_category(); 
+					$slug = $cats[0]->slug;
+					if ($menu == 'three') :?>
+						<?php if ($slug == 'dessert') :?>
+							<h1><?php the_title();?></h1>
+							<h1><?php the_content();?></h1>
+						<?php endif;?>
+					<?php endif;?>
+				<?php endwhile ;?>
+			<?php else : ?>
+				<p>no 3 course apps here</p>
+			<?php endif ;?>
+		</div>
+	</div>
+</section>
 
 
-				<h1><?php the_title();?></h1>
-				<section class="menu three-course">
-					<div class="row">
-						<h1>Three Course Tasting Menu</h1>
-						<h2>75</h2>
-						<div class="small-12 medium-4 large-4 columns">
-
-							<h2>Appetizer</h2>
-							<span class="menu-subtitle">choice of</span>
-						</div>
-						<div class="small-12 medium-4 large-4 columns">
-							<h2>Main</h2>
-							<span class="menu-subtitle">choice of</span>
-						</div>
-						<div class="small-12 medium-4 large-4 columns">
-							<h2>Dessert</h2>
-							<span class="menu-subtitle">choice of</span>
-						</div>
-					</div>
-				</section>
-
-
-
-			
+	
+	
 
 
 
 
 
 
+<!-- section class="menu three-course">
+	<div class="row">
 
-		<?endwhile; ?>
-
-	<? else : ?>
-
-		<p>ntohing!</p>
-	<?endif;?>
-
-
-
-
-
-
+		<h1>Three Course Tasting Menu</h1>
+		<h2>75</h2>
+		<div class="small-12 medium-4 large-4 columns">
+			<h2>Appetizer</h2>
+			<span class="menu-subtitle">choice of</span>
+		</div>
+		<div class="small-12 medium-4 large-4 columns">
+			<h2>Main</h2>
+			<span class="menu-subtitle">choice of</span>
+		</div>
+		<div class="small-12 medium-4 large-4 columns">
+			<h2>Dessert</h2>
+			<span class="menu-subtitle">choice of</span>
+		</div>
+	</div>
+</section> -->
 <section class="menu five-course">
 	<div class="row">
 		<div class="small-12 medium-centered medium-8 large-centerd large-8 columns">
