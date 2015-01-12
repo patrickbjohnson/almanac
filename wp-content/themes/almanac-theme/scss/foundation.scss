@@ -56,7 +56,16 @@
   Add your own folders and scss files for your project and import them below
 */ 
 
+@import "site/base/variables"; 
 @import "site/base/base"; 
 @import "site/base/typography"; 
+
+// buttons
+@import "site/components/_button.config"; 
+@import "site/components/_button"; 
+
+
 @import "site/components/nav"; 
+@import "site/sections/footer"; 
 @import "site/sections/shame"; 
+

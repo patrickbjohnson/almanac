@@ -1,0 +1,10 @@
+.button i {
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+  font-size: 1.250em;
+}
+.btn-reserve {
+  @include btn-base(map-get($colors, 'white'));
+  @include btn-style(em(30px), map-get($colors, 'white'), map-get($colors, 'red'));
+}

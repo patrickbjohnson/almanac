@@ -1,5 +1,20 @@
+$didot: 'Didot W01 Roman', serif;
+$headline: 'Didot W01 Headline', serif;
+
+// font-family:'Didot W01 Italic';
+// font-family:'Didot W01 Bold';
+// font-family:'';
+// font-family:'Didot Open Face W01';
+// font-family:'Linotype Didot W01SC Rm SC';
+// font-family:'Didot W01 Bold Italic';
+// font-family:'LinotypeDidotW95-Orname';
+
+
+
+
+
 body, .copy, %copy  {
-  font-family: sans-serif;
+  font-family: $didot;
   line-height: 1.5;
   font-size: 1em;
 }
@@ -9,6 +24,7 @@ h1,h2,h3,h4,h5,h6, %header {
   font-weight: bold;
   line-height: 1;
   text-shadow: none;
+  font-family: $headline;
 }
 
 h1 {
@@ -26,7 +42,17 @@ h2 {
 }
 
 p {-webkit-backface-visibility: hidden;}
-a {cursor: pointer;}
-a:hover {text-decoration: none;}
+a {
+  font-family: $didot;
+  cursor: pointer;
+  &:hover {text-decoration: none;}
+
+}
+
 q {display: block;}
 cite {display: block;}
+
+.center,
+%center {
+  text-align: center;
+}

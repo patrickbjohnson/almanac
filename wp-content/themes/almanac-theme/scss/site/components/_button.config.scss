@@ -1,0 +1,21 @@
+@mixin btn-base($border){
+	padding: 10px 25px;
+	border: 1px solid $border;
+	background-color: transparent;
+	font-family: $didot;
+	-webkit-animation: all 300ms ease;
+	&:hover {
+		border-color: $border;
+		background-color: $border;
+	}
+}
+
+@mixin btn-style($font-size, $color,  $alt-color){
+	font-size: $font-size;
+	text-transform: uppercase;
+	color: $color;
+	&:hover {
+		color: $alt-color;
+	}
+}
+
