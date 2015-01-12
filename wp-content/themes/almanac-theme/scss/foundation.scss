@@ -55,6 +55,7 @@
   My custom styles:
   Add your own folders and scss files for your project and import them below
 */ 
+@import "site/helpers/functions"; 
 
 @import "site/base/variables"; 
 @import "site/base/base"; 
@@ -63,6 +64,8 @@
 // buttons
 @import "site/components/_button.config"; 
 @import "site/components/_button"; 
+
+@import "site/components/_forms"; 
 
 
 @import "site/components/nav"; 

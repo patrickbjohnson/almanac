@@ -1,31 +1,15 @@
 html, body {
     -webkit-backface-visibility: hidden;
 }
-
-body {
-  color: #333;
-}
-
-section {position: relative;}
-
-
-// .container {
-// 	position: relative;
-// 	width: 1024px;
-// 	margin: auto;
-// }
-
-
 section {
+	position: relative;
 	padding: 15px;
 	@media #{$medium-up} {
 		padding: 25px;
 	}
 }
 
-.vcard {
-	border: 0;
-}
+.vcard {border: 0;}
 
 ul {
 	list-style: none;

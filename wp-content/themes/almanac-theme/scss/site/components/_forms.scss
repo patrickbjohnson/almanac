@@ -1,0 +1,51 @@
+.wpcf7-form {
+  text-transform: uppercase;
+
+  input,
+  .wpcf7-not-valid-tip {text-transform: initial;}
+
+  input[type="text"], 
+  input[type="password"], 
+  input[type="date"], 
+  input[type="datetime"], 
+  input[type="datetime-local"], 
+  input[type="month"], 
+  input[type="week"], 
+  input[type="email"], 
+  input[type="number"], 
+  input[type="search"], 
+  input[type="tel"], 
+  input[type="time"], 
+  input[type="url"], 
+  input[type="color"], 
+  textarea {
+    padding: 25px 15px;
+    font-size: em(18px);
+    background: map-get($colors, 'offWhite');
+    border: 1px solid map-get($colors, 'black');
+  }
+
+  textarea {
+    padding: 10px 15px;
+  }
+
+  input[type="text"]:focus, 
+  input[type="password"]:focus, 
+  input[type="date"]:focus, 
+  input[type="datetime"]:focus, 
+  input[type="datetime-local"]:focus, 
+  input[type="month"]:focus, 
+  input[type="week"]:focus, 
+  input[type="email"]:focus, 
+  input[type="number"]:focus, 
+  input[type="search"]:focus, 
+  input[type="tel"]:focus, 
+  input[type="time"]:focus, 
+  input[type="url"]:focus, 
+  input[type="color"]:focus, 
+  textarea:focus {
+    background: lighten(map-get($colors, 'offWhite'), 2%);
+    border: 1px solid map-get($colors, 'black'); 
+    box-shadow: none;
+  }
+}

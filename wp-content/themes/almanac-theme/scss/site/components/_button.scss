@@ -1,10 +1,28 @@
 .button i {
-  margin-right: 10px;
+  margin-right: 15px;
   position: relative;
   top: 2px;
-  font-size: 1.250em;
+  font-size: 1em;
+  @media #{$medium-up} {
+    top: 4px;
+  }
 }
 .btn-reserve {
   @include btn-base(map-get($colors, 'white'));
-  @include btn-style(em(30px), map-get($colors, 'white'), map-get($colors, 'red'));
+  @include btn-style(em(20px), map-get($colors, 'white'), map-get($colors, 'red'));
+  @media #{$medium-up} {
+    font-size: em(30px);
+  }
 }
+
+.wpcf7-form-control.wpcf7-submit {
+
+  @include btn-base(map-get($colors, 'red'));
+  @include btn-style(em(20px), map-get($colors, 'red'), map-get($colors, 'white'));
+  display: block;
+  margin: auto;
+  @media #{$medium-up} {
+    font-size: em(30px);
+  }
+}
+
