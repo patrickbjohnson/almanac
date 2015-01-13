@@ -7,51 +7,44 @@
 // Code to display Page goes here...
 ?>
 <?php get_header(); ?>
+	<div class="row center">
+			<h1><?php the_title();?></h1>
+	</div>
+	
+	<?php 
+	$args = array( 'post_type' => 'almanac_press');
+	$loop = new WP_Query( $args );
+	if ($loop->have_posts()) : ?>
+		<div class="row press">
+			<? while ($loop->have_posts()) : $loop->the_post(); ?>
+				<?php 
+				$img = get_field('press_image');?>
+				<div class="small-12 medium-4 large-4 columns press-item">
+					<a href="<?php the_field('press_link');?>">
+						<img src="<?php echo $img['sizes']['large']; ?>" alt="">
+					</a>
+					<q cite="<?php the_field('press_link');?>"><?php the_field('press_quote');?></q>
+					<cite><a href="<?php the_field('press_link');?>">- <?php the_title();?></a></cite>	
+				</div>
+				
+				
+			<?php endwhile ;?>
+		</div>
+		
+	<?php else : ?>
+		<div class="row center">
+			<p>No press to report at this time</p>	
+		</div>
+		
+	<?php endif ;?>
 	<?php while (have_posts()) : the_post(); ?>
-		<article <?php post_class() ?> id="page-<?php the_ID(); ?>">
-			<section>
-				<div class="row">
-					<div class="small-12 medium-12 large-12">
-						<header>
-							<h1><?php the_title();?></h1>
-							<hr>
-						</header>
-					</div>
-				</div>
-			</section>
-			<section class="press">
-				<div class="row">
-					<div class="press-item small-12 medium-4 large-4 columns">
-						<a href="#">
-							<img class="press-img" src="http://placehold.it/350x150">
-							<q>Best Restuarant in NYC</q>
-						</a>
-						<cite>New York Times</cite>
-					</div>
-					<div class="press-item small-12 medium-4 large-4 columns">
-						<a href="#">
-							<img class="press-img" src="http://placehold.it/350x150">
-							<q>Best Restuarant in NYC</q>
-						</a>
-						<cite>New York Times</cite>
-						
-
-					</div>
-					<div class="press-item small-12 medium-4 large-4 columns">
-						<a href="#">
-							<img class="press-img" src="http://placehold.it/350x150">
-							<q>Best Restuarant in NYC</q>
-						</a>
-						<cite>New York Times</cite>
-						
-
-					</div>
-				</div>
-			</section>
-
-			
-		</article>
+		<div class="row center">
+			<h1>Press Inquieries</h1>
+			<div class="small-12 small-centered columns">
+				<?php the_content();?>
+			</div>
+		</div>
 	<?php endwhile;?>
-
+	
 	
 <?php get_footer();?>

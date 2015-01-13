@@ -14,10 +14,13 @@
 		<div class="row">
 			<div class="small-12 medium-centered medium-10  large-centered large-10 columns">
 				<a class="button btn-reserve" href="<?php echo get_field('reservation_url');?>" target="_blank"><i class="ss-calendar"></i>Reserve Now</a>
-				<p>restuart address from ACF</p>
-				<div id="map-canvas">
-					google map with custom google drop
+				<?php 
+				$location = get_field('google_map', 'option');
+				if( !empty($location) ):?>
+				<div class="acf-map">
+					<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
 				</div>
+				<?php endif; ?>
 			</div>
 		</div class="row">
 	</section>
