@@ -57,10 +57,19 @@ function add_marker( $marker, map ) {
 	// var
 	var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
 
+	// image marker
+	var image = {
+		url: $marker.attr('data-marker'),
+		size: new google.maps.Size(70, 88.247),
+		origin: new google.maps.Point(0, 0),
+		scaledSize: new google.maps.Size(35, 44.1235)
+	}
+
 	// create marker
 	var marker = new google.maps.Marker({
 		position	: latlng,
-		map			: map
+		map		: map,
+		icon		: image
 	});
 
 	// add to array

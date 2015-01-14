@@ -15,10 +15,11 @@
 			<div class="small-12 medium-centered medium-10  large-centered large-10 columns">
 				<a class="button btn-reserve" href="<?php echo get_field('reservation_url');?>" target="_blank"><i class="ss-calendar"></i>Reserve Now</a>
 				<?php 
-				$location = get_field('google_map', 'option');
+				$location = get_field('almanac_google_map', 'option');
+				$marker 	 = get_field('almanac_restaurant_marker', 'option');
 				if( !empty($location) ):?>
 				<div class="acf-map">
-					<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+					<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>" data-marker="<?php echo $marker;?>"></div>
 				</div>
 				<?php endif; ?>
 			</div>
