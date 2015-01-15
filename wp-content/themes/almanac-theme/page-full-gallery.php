@@ -8,7 +8,7 @@
 ?>
 <?php get_header(); ?>
 	<?php while (have_posts()) : the_post(); ?>
-		<article <?php post_class() ?> id="page-<?php the_ID(); ?>">
+		<article  ?>
 			<section>
 				<div class="row">
 					
@@ -16,18 +16,15 @@
 						<header>
 							<h1><?php the_title();?></h1>
 							<hr>
-							<?php the_content(); ?>
+							
 
 						</header>
+						<?php the_content(); ?>
 					</div>
 				</div>
 			</section>
-			<section class="full gallery">
-				<h1>image gallery</h1>
-			</section>
 
 			
-		</article>
 	<?php endwhile;?>
 
 	

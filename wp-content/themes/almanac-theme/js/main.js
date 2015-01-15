@@ -17,7 +17,8 @@ function render_map( $el ) {
 	var args = {
 		zoom		: 16,
 		center		: new google.maps.LatLng(0, 0),
-		mapTypeId	: google.maps.MapTypeId.ROADMAP
+		mapTypeId	: google.maps.MapTypeId.ROADMAP,
+		scrollwheel: false,
 	};
 
 	// create map	        	
@@ -122,16 +123,12 @@ function center_map( map ) {
 
 	// only 1 marker?
 	if( map.markers.length == 1 )
-	{
-		// set center of map
+	{	// set center of map
 	    map.setCenter( bounds.getCenter() );
 	    map.setZoom( 16 );
-	}
-	else
-	{
+	} else {
 		// fit to bounds
 		map.fitBounds( bounds );
 	}
 
 }
-console.log('end of function calls for map');

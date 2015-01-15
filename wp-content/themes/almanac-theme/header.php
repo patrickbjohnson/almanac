@@ -35,9 +35,11 @@
 	
 	
 	<div class="main-nav">
-	 <?php main_navigation_left(); ?>
+	 	<?php main_navigation_left(); ?>
 		<a class="logo nav-toggle mobile-only" href="#">Almanac</a>
-	<?php main_navigation_left(); ?>
+		<?php main_navigation_left(); ?>
 		<a href="#" class="desktop-only"><h1>Almanac</h1></a>
 	</div>
-
+	<div class="container"  id="page-<?php the_ID(); ?>">
+		
+	

@@ -1,7 +1,7 @@
 <?php
 /*
- * Template Name: Auxiliary Page
- * Description: Almanac Auxiliary Page Template Layout
+ * Template Name: Private Events
+ * Description: Private Events Page Template Layout
  */
 
 // Code to display Page goes here...
@@ -16,9 +16,8 @@
 				<div class="small-12 medium-8 medium-centered large-8 large-centered columns">
 					<?php the_content(); ?>	
 				</div>
-				
 			</div>
-		</section <?php post_class() ?> id="page-<?php the_ID(); ?>">
+		</section>
 	<?php endwhile;?>
 
-<?php get_footer(); echo 'page-Auxiliary.php';?>
+<?php get_footer();?>

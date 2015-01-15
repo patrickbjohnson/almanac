@@ -9,8 +9,10 @@
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post(); ?>
 
-		<?php $slider  = intval(get_field('image_slider'));masterslider($slider);?>
+	<?php the_field('image_slider');?>
+
 	<section class="full color center">
+		<div class="arrow-down"></div>
 		<div class="row">
 			<div class="small-12 medium-centered medium-10  large-centered large-10 columns">
 				<a class="button btn-reserve" href="<?php echo get_field('reservation_url');?>" target="_blank"><i class="ss-calendar"></i>Reserve Now</a>

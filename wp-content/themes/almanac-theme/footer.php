@@ -1,3 +1,5 @@
+
+</div>
 <footer class="footer full center">
 	<div class="logo logo-footer">
 		<img src="<?php bloginfo('template_directory'); ?>/img/logo-full.svg" alt="">	
