@@ -1,10 +1,10 @@
-.button i {
+.button span.icon-calendar {
   margin-right: 15px;
   position: relative;
   top: 2px;
   font-size: 1em;
   @media #{$medium-up} {
-    top: 4px;
+    top: 2px;
   }
 }
 .btn-reserve {

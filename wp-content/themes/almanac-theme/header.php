@@ -19,8 +19,8 @@
 			wp_title('');
 		} else {
 			echo wp_title( ' | ', 'false', 'right' ); bloginfo( 'name' );
-		} ?></title><link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/7ac99170-d19e-4fa7-8d98-68308496f559.css"/>
-		<link rel="stylesheet" href="http://i.icomoon.io/public/temp/81e27634bc/UntitledProject1/style.css">
+		} ?></title>
+		<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/7ac99170-d19e-4fa7-8d98-68308496f559.css"/>
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/foundation.css" />
 		<link rel="icon" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">

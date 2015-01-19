@@ -1,0 +1,82 @@
+.menu-header {
+	margin-bottom: 15px; 
+	@media #{$medium-up}{
+		margin-bottom: 35px;
+	}
+
+	h1 {
+		margin-bottom: 5px;
+		text-transform: uppercase;
+	}
+
+	span {
+		font-size: em(16px);
+		@media #{$medium-up}{
+			font-size: em(18px);
+		}
+	}
+}
+
+.menu-section--title {
+	text-transform: uppercase;
+	font-size: em(18px);
+	@media #{$medium-up}{
+		font-size: em(20px);
+	}
+}
+
+.menu-section--subtitle {
+	display: inline-block;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	font-style: italic;
+	color: map-get($colors, 'red');
+	@media #{$medium-up}{
+		margin-bottom: 25px;
+	}
+	@media #{$medium-up}{
+		margin-bottom: 25px;
+	}
+}
+
+.menu-item {
+	margin-bottom: 15px;
+	padding: 5px 0;
+	@media #{$medium-up} {
+		margin-bottom: 15px;
+		padding: 10px 0;
+
+	}
+	@media #{$large-up} {
+		padding: 15px 10px;
+	}
+
+	&--title {
+		margin-bottom: 5px;
+		font-size: em(20px);
+		text-transform: uppercase;
+		@media #{$medium-up} {
+			font-size: em(26px);
+
+		}
+	}
+	&--description {
+		font-size: em(16px);
+		@media #{medium-up}{
+			font-size: em(18px);
+
+		}
+	}
+
+	&--description p {
+		margin-bottom: 0;
+	}
+}
+
+
+.menu-middle {
+	@media #{$medium-up} {
+    	border-right: 1px solid map-get($colors, black);
+		border-left: 1px solid map-get($colors, black);
+  }
+}

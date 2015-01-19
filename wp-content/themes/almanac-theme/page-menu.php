@@ -3,190 +3,248 @@
  * Template Name: Menu Page
  * Description: Almanac Menu Page Template Layout
  */
-
-// Code to display Page goes here...
 ?>
 <?php get_header(); ?>
-<?php the_title();?>
-<section class="full">
+
+<section class="full color center">
 	<div class="row">
-		<div class="small-12 medium-12 large-12">
-			<header>
-				<h1>The Menu</h1>
+		<div class="small-12 medium-12 large-12 ">
+			<header class="">
+				<h1><?php the_title();?></h1>
 			</header>
-			<p>Write some copy here describing that the menu is updated daily and this may actually be a good place to write some copy about where the food is sourced from.</p>
+			<?php while (have_posts()) : the_post(); ?>
+				<?php the_content(); ?>
+			<?php endwhile ;?>
+			<!-- Needs to be in a loop -->
 		</div>
 	</div>
-</section>
-
-
-<section class="menu three-course">
-	<div class="row">
-		<h1>Three Course Tasting Menu</h1>
-		<h2>75</h2>
-		<div class="small-12 medium-4 large-4 columns">
-			<h2>Appetizer</h2>
-			<span class="menu-subtitle">choice of</span>
-			<?php 
-			$args = array( 'post_type' => 'almanac_menu');
-			$loop = new WP_Query( $args );
-
-			if ($loop->have_posts()) : 
-				while ($loop->have_posts()) : 
-					$loop->the_post(); ?>
-					<?php 
-					$menu = get_field('dish_menu')[0]; 
-					$cats = get_the_category(); 
-					$slug = $cats[0]->slug;
-					if ($menu == 'three') :?>
-						<?php if ($slug == 'app') :?>
-							<h1><?php the_title();?></h1>
-							<h1><?php the_content();?></h1>
-						<?php endif;?>
-					<?php endif;?>
-				<?php endwhile ;?>
-			<?php else : ?>
-				<p>no 3 course apps here</p>
-			<?php endif ;?>
-		</div>
-		<div class="small-12 medium-4 large-4 columns">
-			<h2>Main</h2>
-			<span class="menu-subtitle">choice of</span>
-			<?php 
-			$args = array( 'post_type' => 'almanac_menu');
-			$loop = new WP_Query( $args );
-
-			if ($loop->have_posts()) : 
-				while ($loop->have_posts()) : 
-					$loop->the_post(); ?>
-					<?php 
-					$menu = get_field('dish_menu')[0]; 
-					$cats = get_the_category(); 
-					$slug = $cats[0]->slug;
-					if ($menu == 'three') :?>
-						<?php if ($slug == 'main') :?>
-							<h1><?php the_title();?></h1>
-							<h1><?php the_content();?></h1>
-						<?php endif;?>
-					<?php endif;?>
-				<?php endwhile ;?>
-			<?php else : ?>
-				<p>no 3 course apps here</p>
-			<?php endif ;?>
-		</div>
-		<div class="small-12 medium-4 large-4 columns">
-			<h2>Dessert</h2>
-			<span class="menu-subtitle">choice of</span>
-			<?php 
-			$args = array( 'post_type' => 'almanac_menu');
-			$loop = new WP_Query( $args );
-
-			if ($loop->have_posts()) : 
-				while ($loop->have_posts()) : 
-					$loop->the_post(); ?>
-					<?php 
-					$menu = get_field('dish_menu')[0]; 
-					$cats = get_the_category(); 
-					$slug = $cats[0]->slug;
-					if ($menu == 'three') :?>
-						<?php if ($slug == 'dessert') :?>
-							<h1><?php the_title();?></h1>
-							<h1><?php the_content();?></h1>
-						<?php endif;?>
-					<?php endif;?>
-				<?php endwhile ;?>
-			<?php else : ?>
-				<p>no 3 course apps here</p>
-			<?php endif ;?>
-		</div>
-	</div>
-</section>
-
-
-	
-	
-
-
-
-
-
-
-<!-- section class="menu three-course">
-	<div class="row">
-
-		<h1>Three Course Tasting Menu</h1>
-		<h2>75</h2>
-		<div class="small-12 medium-4 large-4 columns">
-			<h2>Appetizer</h2>
-			<span class="menu-subtitle">choice of</span>
-		</div>
-		<div class="small-12 medium-4 large-4 columns">
-			<h2>Main</h2>
-			<span class="menu-subtitle">choice of</span>
-		</div>
-		<div class="small-12 medium-4 large-4 columns">
-			<h2>Dessert</h2>
-			<span class="menu-subtitle">choice of</span>
-		</div>
-	</div>
-</section> -->
-<section class="menu five-course">
-	<div class="row">
-		<div class="small-12 medium-centered medium-8 large-centerd large-8 columns">
-			<h1>Five Course Tasting Menu</h1>
-			<h2>95</h2>
-			<ul>
-				<li>Item #</li>
-				<li>Item #</li>
-				<li>Item #</li>
-				<li>Item #</li>
-				<li>Item #</li>
-				<li>Item #</li>
-			</ul>
-		</div>
-	</div>
-</section>
-<section class="menu eight-course">
-	<div class="row">
-		<div class="small-12 medium-centered medium-8 large-centerd large-8 columns">
-			<h1>Eight Course Tasting Menu</h1>
-			<h2>145</h2>
-			<ul>
-				<li>Item #</li>
-				<li>Item #</li>
-				<li>Item #</li>
-				<li>Item #</li>
-				<li>Item #</li>
-				<li>Item #</li>
-			</ul>
-		</div>
-	</div>
-</section>
-<section class="menu menu-footer menu-notice">
-	<p>We welcome any substitutions and happily allow all dishes to be enjoyed á la carte.</p>
 </section>
 
 
 <?php 
+	$args = array( 'post_type' => 'almanac_dish');
+	$loop = new WP_Query( $args );
+	$custom = get_field('custom_menu_title');
+?>
 
+<section class="menu menu-three-course center">
+	<div class="row">
+		<header class="menu-header">
+			<h1>Three Course Tasting Menu</h1>
+			<span><?php the_field('three_course_menu_price', 'option'); ?></span>
+		</header>
+		
+		<div class="small-12 medium-4 large-4 columns">
 
-	while (have_posts()) : the_post(); ?>
-		<article <?php post_class() ?> id="page-<?php the_ID(); ?>">
+			<h2 class="menu-section--title">Appetizer</h2>
+
+			<span class="menu-section--subtitle">choice of</span>
+		
+			<?php if ($loop->have_posts()) : 
+				while ($loop->have_posts()) : 
+					$loop->the_post();
+					if( in_category('3-course') && has_term('appetizer', 'dish_type') ) : ?>
+						<div class="menu-item">
+							<h1 class="menu-item--title"><?php the_title();?></h1>
+							<div class="menu-item--description">
+								<?php the_content(); ?>
+							</div>
+						</div>
+					<?php endif;
+				endwhile ;
+			endif; ?>
+		</div>
+
+		<?php $loop->rewind_posts(); ?>
+
+		<div class="menu-middle small-12 medium-4 large-4 columns">
+			<h2 class="menu-section--title">Main</h2>
+			<span class="menu-section--subtitle">choice of</span>
+
+			<?php if ($loop->have_posts()) : 
+				while ($loop->have_posts()) : 
+					$loop->the_post();
+					if( in_category('3-course') && has_term('main', 'dish_type') ) : ?>
+						<div class="menu-item">
+							<h1 class="menu-item--title"><?php the_title();?></h1>
+							<div class="menu-item--description">
+								<?php the_content(); ?>
+							</div>
+						</div>
+					<?php endif;
+				endwhile ;
+			endif; ?>
+		</div>
+
+		<?php $loop->rewind_posts(); ?>
+
+		<div class="medium-4 columns">
+			<h2 class="menu-section--title">Dessert</h2>
+			<span class="menu-section--subtitle">choice of</span>
+			<?php if ($loop->have_posts()) : 
+				while ($loop->have_posts()) : 
+					$loop->the_post();
+					if( in_category('3-course') && has_term('dessert', 'dish_type') ) : ?>
+						<div class="menu-item">
+							<h1 class="menu-item--title"><?php the_title();?></h1>
+							<div class="menu-item--description">
+								<?php the_content(); ?>
+							</div>
+						</div>
+					<?php endif;
+				endwhile ;
+			endif; ?>
+		</div>
+	</div>
+</section>
+<hr>
+<section class="menu menu-five-course center">
+	<div class="row">
+		<div class="small-12 medium-8 medium-centered large-8 large-centered columns">
+			<header class="menu-header">
+				<h1>Five Course Tasting Menu</h1>
+				<span><?php the_field('five_course_menu_price', 'option'); ?></span>
+			</header>
 			
+			<?php if ($loop->have_posts()) : 
+				while ($loop->have_posts()) : 
+					$loop->the_post();
+					if (in_category('5-course') && has_term('appetizer', 'dish_type')) :?>
+						<div class="menu-item">
+							<h1 class="menu-item--title"><?php the_title();?></h1>
+							<div class="menu-item--description">
+								<?php the_content(); ?>
+							</div>
+						</div>
+					<?php endif ; ?>
 
-			<div class="entry-content">
-				<?php the_content(); ?>
+					<?php if (in_category('5-course') && has_term('main', 'dish_type')) :?>
+						<div class="menu-item">
+							<h1 class="menu-item--title"><?php the_title();?></h1>
+							<div class="menu-item--description">
+								<?php the_content(); ?>
+							</div>
+						</div>
+					<?php endif ; ?>
+
+					<?php if (in_category('5-course') && has_term('dessert', 'dish_type')) :?>
+						<div class="menu-item">
+							<h1 class="menu-item--title"><?php the_title();?></h1>
+							<div class="menu-item--description">
+								<?php the_content(); ?>
+							</div>
+						</div>
+					<?php endif ; ?>
+					
+				<?php endwhile ; 
+			endif; ?>
+		</div>
+	</div>
+	
+</section>
+<hr>
+<section class="menu menu-eight-course center">
+	<div class="row">
+		<div class="small-12 medium-8 medium-centered large-8 large-centered columns">
+			<header class="menu-header">
+				<h1>Eight Course Tasting Menu</h1>
+				<span><?php the_field('eight_course_menu_price', 'option'); ?></span>
+			</header>
+			
+			<?php if ($loop->have_posts()) : 
+				while ($loop->have_posts()) : 
+					$loop->the_post();
+					if (in_category('8-course') && has_term('appetizer', 'dish_type')) :?>
+						<div class="menu-item">
+							<h1 class="menu-item--title"><?php the_title();?></h1>
+							<div class="menu-item--description">
+								<?php the_content(); ?>
+							</div>
+						</div>
+					<?php endif ; ?>
+
+					<?php if (in_category('8-course') && has_term('main', 'dish_type')) :?>
+						<div class="menu-item">
+							<h1 class="menu-item--title"><?php the_title();?></h1>
+							<div class="menu-item--description">
+								<?php the_content(); ?>
+							</div>
+						</div>
+					<?php endif ; ?>
+
+					<?php if (in_category('8-course') && has_term('dessert', 'dish_type')) :?>
+						<div class="menu-item">
+							<h1 class="menu-item--title"><?php the_title();?></h1>
+							<div class="menu-item--description">
+								<?php the_content(); ?>
+							</div>
+						</div>
+					<?php endif ; ?>
+					
+				<?php endwhile ; 
+			endif; ?>
+		</div>
+	</div>
+</section>
+
+
+<?php if($custom) : ?>
+	<hr>
+	<section class="menu menu-eight-course center">
+		<div class="row">
+			<div class="small-12 medium-8 medium-centered large-8 large-centered columns">
+			<header class="menu-header">
+				<h1><?php echo $custom; ?></h1>
+				<span><?php the_field('custom_menu_price', 'option'); ?></span>
+			</header>
+		
+		<?php if ($loop->have_posts()) : 
+			while ($loop->have_posts()) : 
+				$loop->the_post();
+				if (in_category('custom-menu') && has_term('appetizer', 'dish_type')) :?>
+					<div class="menu-item">
+						<h1 class="menu-item--title"><?php the_title();?></h1>
+						<div class="menu-item--description">
+							<?php the_content(); ?>
+						</div>
+					</div>
+				<?php endif ; ?>
+
+				<?php if (in_category('custom-menu') && has_term('main', 'dish_type')) :?>
+					<div class="menu-item">
+						<h1 class="menu-item--title"><?php the_title();?></h1>
+						<div class="menu-item--description">
+							<?php the_content(); ?>
+						</div>
+					</div>
+				<?php endif ; ?>
+
+				<?php if (in_category('custom-menu') && has_term('dessert', 'dish_type')) :?>
+					<div class="menu-item">
+						<h1 class="menu-item--title"><?php the_title();?></h1>
+						<div class="menu-item--description">
+							<?php the_content(); ?>
+						</div>
+					</div>
+				<?php endif ; ?>
+				
+			<?php endwhile ; 
+		endif; ?>
 			</div>
-			<footer>
-				<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'FoundationPress'), 'after' => '</p></nav>' )); ?>
-				<p><?php the_tags(); ?></p>
-			</footer>
-			
-		</article>
-	<?php endwhile;?>
+		</div>
+		
+	</section>
+
+<?php endif; ?>
+
+
+<section class="menu menu-footer menu-notice center">
+	<p>We welcome any substitutions and happily allow all dishes to be enjoyed á la carte.</p>
+</section>
+
 
 	
 	
 
 	
-<?php get_footer(); echo 'page-menu.php';?>
+<?php get_footer();?>

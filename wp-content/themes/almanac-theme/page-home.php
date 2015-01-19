@@ -15,7 +15,7 @@
 		<div class="arrow-down"></div>
 		<div class="row">
 			<div class="small-12 medium-centered medium-10  large-centered large-10 columns">
-				<a class="button btn-reserve" href="<?php echo get_field('reservation_url');?>" target="_blank"><i class="ss-calendar"></i>Reserve Now</a>
+				<a class="button btn-reserve" href="<?php echo get_field('reservation_url');?>" target="_blank"><span class="icon-calendar"></span>Reserve Now</a>
 				<?php 
 				$location = get_field('almanac_google_map', 'option');
 				$marker 	 = get_field('almanac_restaurant_marker', 'option');

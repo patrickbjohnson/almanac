@@ -3,7 +3,7 @@
 
   input,
   .wpcf7-not-valid-tip {text-transform: initial;}
-
+  
   input[type="text"], 
   input[type="password"], 
   input[type="date"], 
@@ -23,6 +23,8 @@
     font-size: em(18px);
     background: map-get($colors, 'offWhite');
     border: 1px solid map-get($colors, 'black');
+    margin-top: 5px;
+    margin-bottom: 30px;
   }
 
   textarea {
@@ -48,4 +50,29 @@
     border: 1px solid map-get($colors, 'black'); 
     box-shadow: none;
   }
+
+  // error states
+  input.wpcf7-not-valid.error,
+  input[type="text"]:focus.wpcf7-not-valid.error, 
+  input[type="email"]:focus.wpcf7-not-valid.error,
+  input[type="text"]:focus.wpcf7-not-valid.error, 
+  input[type="password"]:focus.wpcf7-not-valid.error, 
+  input[type="date"]:focus.wpcf7-not-valid.error, 
+  input[type="datetime"]:focus.wpcf7-not-valid.error, 
+  input[type="datetime-local"].wpcf7-not-valid.error:focus, 
+  input[type="month"]:focus.wpcf7-not-valid.error, 
+  input[type="week"]:focus.wpcf7-not-valid.error, 
+  input[type="email"]:focus.wpcf7-not-valid.error, 
+  input[type="number"]:focus.wpcf7-not-valid.error, 
+  input[type="search"]:focus.wpcf7-not-valid.error, 
+  input[type="tel"]:focus.wpcf7-not-valid.error, 
+  input[type="time"]:focus.wpcf7-not-valid.error, 
+  input[type="url"]:focus.wpcf7-not-valid.error, 
+  input[type="color"]:focus.wpcf7-not-valid.error  {border: 1px solid map-get($colors, 'alert');}
+
+  input.error::-webkit-input-placeholder {color: map-get($colors, 'alert');} 
+  input.error:-moz-placeholder {color: map-get($colors, 'alert');}        // Firefox < 19
+  input.error::-moz-placeholder {color: map-get($colors, 'alert');}       // Firefox > 19
+  input.error:-ms-input-placeholder {color: map-get($colors, 'alert');}   // Internet Explorer 10
+
 }

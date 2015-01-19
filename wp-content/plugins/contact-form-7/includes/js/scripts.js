@@ -231,7 +231,9 @@
 			var $into = $(this);
 
 			$into.find('span.wpcf7-not-valid-tip').remove();
-			$into.append('<span role="alert" class="wpcf7-not-valid-tip">' + message + '</span>');
+			$into.find('input').addClass('wpcf7-not-valid-tip error').attr('placeholder', message);
+			// console.log($into);
+			// $into.append('<span role="alert" class="wpcf7-not-valid-tip">' + message + '</span>');
 
 			if ($into.is('.use-floating-validation-tip *')) {
 				$('.wpcf7-not-valid-tip', $into).mouseover(function() {
@@ -306,6 +308,7 @@
 		return this.each(function() {
 			$(this).find('div.wpcf7-response-output').hide().empty().removeClass('wpcf7-mail-sent-ok wpcf7-mail-sent-ng wpcf7-validation-errors wpcf7-spam-blocked').removeAttr('role');
 			$(this).find('span.wpcf7-not-valid-tip').remove();
+			$(this).find('input').attr('placeholder', '').removeClass('error');
 			$(this).find('img.ajax-loader').css({ visibility: 'hidden' });
 		});
 	};
