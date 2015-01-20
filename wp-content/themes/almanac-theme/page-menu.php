@@ -9,8 +9,9 @@
 <section class="full color center">
 	<div class="row">
 		<div class="small-12 medium-12 large-12 ">
-			<header class="">
+			<header class="section-header">
 				<h1><?php the_title();?></h1>
+				<hr class="hr-small hr-light">
 			</header>
 			<?php while (have_posts()) : the_post(); ?>
 				<?php the_content(); ?>
@@ -97,7 +98,7 @@
 		</div>
 	</div>
 </section>
-<hr>
+<hr class="hr-large hr-dark">
 <section class="menu menu-five-course center">
 	<div class="row">
 		<div class="small-12 medium-8 medium-centered large-8 large-centered columns">
@@ -142,7 +143,7 @@
 	</div>
 	
 </section>
-<hr>
+<hr class="hr-large hr-dark">
 <section class="menu menu-eight-course center">
 	<div class="row">
 		<div class="small-12 medium-8 medium-centered large-8 large-centered columns">
@@ -189,7 +190,7 @@
 
 
 <?php if($custom) : ?>
-	<hr>
+	<hr class="hr-large hr-dark">
 	<section class="menu menu-eight-course center">
 		<div class="row">
 			<div class="small-12 medium-8 medium-centered large-8 large-centered columns">

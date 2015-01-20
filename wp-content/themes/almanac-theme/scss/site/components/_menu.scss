@@ -76,6 +76,7 @@
 
 .menu-middle {
 	@media #{$medium-up} {
+		min-height: 300px;
     	border-right: 1px solid map-get($colors, black);
 		border-left: 1px solid map-get($colors, black);
   }

@@ -1,3 +1,4 @@
+// $didot: 'Linotype Didot W01SC Rm SC', serif;
 $didot: 'Didot W01 Roman', serif;
 $headline: 'Didot W01 Headline', serif;
 
@@ -15,7 +16,7 @@ $headline: 'Didot W01 Headline', serif;
 
 body, .copy, %copy  {
   font-family: $didot;
-  line-height: 1.5;
+  line-height: 1.8;
   font-size: 1em;
 }
 
@@ -41,7 +42,9 @@ h2 {
   }
 }
 
-p {-webkit-backface-visibility: hidden;}
+p {
+  line-height: 1.8;
+  -webkit-backface-visibility: hidden;}
 a {
   font-family: $didot;
   cursor: pointer;
@@ -60,3 +63,5 @@ cite {display: block;}
 .ss-social a {
   width: 15px;
 }
+
+header.section-header {text-transform: uppercase;}

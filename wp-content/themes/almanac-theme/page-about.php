@@ -11,10 +11,11 @@
 	<section class="full color about center">
 		<div class="row">
 			<div class="small-12 medium-12 large-12 columns">
-				<header>
+				<header class="section-header">
 					<h1><?php the_title();?></h1>
-					<p><?php the_content();?></p>
+					<hr class="hr-small hr-light">
 				</header>
+				<?php the_content();?>
 			</div>
 		</div>
 	</section>
@@ -27,14 +28,15 @@
 	$loop = new WP_Query( $args );
 ?>
 	
-<section class="full team">
+<section class="full team center">
 	<div class="row">
-		<header class="small-12 medium-centered medium-8 large-centerd large-8 center columns">
+		<header class="section-header">
 				<h1>Our Team</h1>
+				<hr class="hr-small hr-dark">
 		</header>
 		<?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>	
 			<?php if( has_term('head-chef', 'staff_role')) :?>
-				<div class="small-12 medium-centered medium-8 large-centerd large-8 columns">
+				<div class="small-12 medium-centered medium-8 large-centerd large-8 columns employee head-chef">
 					<?php $headshot = get_field('chef_picture');?>
 					<img src="<?php echo $headshot['sizes']['large'];?>">
 					<h2 class="team-name"><?php the_title();?></h2>
@@ -47,33 +49,32 @@
 	<div class="row">
 		<?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>	
 			<?php if( has_term('chef-line-cook', 'staff_role')) :?>
-				<div class="small-12 medium-6 large-6 center columns">
+				<div class="small-12 medium-6 large-6 center columns employee chefs">
 					<h2 class="team-name"><?php the_title();?></h2>
 					<span class="team-title"><?php the_field('job_title');?></span>
 				</div>
 			<?php endif;?>
-				
 		<?php endwhile ;endif; ?>
 	</div>	
+	<hr class="hr-large hr-dark">
 	<div class="row">
 		<?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>	
 			<?php if( has_term('staff', 'staff_role')) :?>
-				<div class="small-12 medium-4 large-4 center columns">
+				<div class="small-12 medium-4 large-4 center columns employee staff">
 					<h2 class="team-name"><?php the_title();?></h2>
 					<span class="team-title"><?php the_field('job_title');?></span>
 				</div>
 			<?php endif;?>
-				
 		<?php endwhile ;endif; ?>
 	</div>
 </section>
-<section class="full location">
+<section class="full location center">
 	<div class="row center">
-		<header>
+		<header class="section-header">
 			<h1>Location</h1>
-			<hr>
-			<p class="small-12 medium-6 medium-centered columns">Almanac and our sister restaurant, Mas Farmhouse, are both located in Manhattan’s West Village neighorhood.</p>
+			<hr class="hr-large hr-dark">
 		</header>
+		<p>Almanac and our sister restaurant, Mas Farmhouse, are both located in Manhattan’s West Village neighorhood.</p>
 		<div class="small-12 medium-6 large-6 center columns">
 			<?php 
 			$location = get_field('almanac_google_map', 'option');
@@ -130,10 +131,5 @@
 	
 </section>
 
-
-
 	
-	<?php do_action('foundationPress_after_content'); ?>
-
-	
-<?php get_footer(); echo 'page-home.php';?>
+<?php get_footer();?>

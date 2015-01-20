@@ -23,6 +23,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-hr-white:before {
+	content: "\e604";
+}
+
 .icon-calendar:before {
 	content: "\e603";
 }

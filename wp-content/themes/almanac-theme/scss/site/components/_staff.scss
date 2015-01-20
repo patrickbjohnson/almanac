@@ -1,0 +1,64 @@
+.team-name {
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+.team-title {
+	font-style: italic; 
+	color: map-get($colors, 'red');
+	text-transform: capitalize;
+	
+}
+
+.head-chef {
+	margin-bottom: 50px;
+	img {
+		border: 5px solid map-get($colors, 'red');
+		margin-bottom: 25px;
+	}
+
+	.team-title {
+		display: inline-block;
+		margin-bottom: 15px;
+	}
+}
+
+.chefs {
+	margin-bottom: 25px;
+	@media #{$medium-up}{
+		margin-bottom: 0;
+		padding: 25px 0 15px;
+	}
+	&:first-child {
+		@media #{$medium-up}{
+			border-right: 1px solid map-get($colors, 'black');
+		}
+	}
+}
+	
+
+.staff {
+	margin: 5px 0;
+	@media #{$medium-up}{ 
+		margin-bottom: 50px;
+	}
+	
+}
+	
+
+
+// move
+.about {margin-bottom: 50px;}
+.about:after {
+	content: "";
+	width: 0;
+	height: 40px;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-top: 40px solid map-get($colors, 'red');
+	position: absolute;
+	bottom: -40px;
+	margin: auto;
+	display: block;
+	left: 0;
+	right: 0;
+}

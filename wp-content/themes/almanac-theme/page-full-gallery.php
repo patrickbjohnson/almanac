@@ -8,14 +8,12 @@
 ?>
 <?php get_header(); ?>
 	<?php while (have_posts()) : the_post(); ?>
-		<article  ?>
 			<section>
-				<div class="row">
-					
+				<div class="row center">
 					<div class="small-12 medium-12 large-12">
-						<header>
+						<header class="section-header">
 							<h1><?php the_title();?></h1>
-							<hr>
+							<hr class="hr-small hr-dark">
 							
 
 						</header>
@@ -23,8 +21,6 @@
 					</div>
 				</div>
 			</section>
-
-			
 	<?php endwhile;?>
 
 	

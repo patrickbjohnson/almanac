@@ -7,6 +7,14 @@
 .location .acf-map {border-color: map-get($colors, 'red');}
 .email,
 .street-address {display: block;}
+.email,
 .tel,
 .fax,
-.map {margin: 0 5px;}
+.map,
+.url {
+	margin: 0 5px; color: 
+	map-get($colors, 'red');
+	&:hover {
+		color: map-get($colors, 'red');
+	}
+}

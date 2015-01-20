@@ -8,7 +8,11 @@
 ?>
 <?php get_header(); ?>
 	<div class="row center">
+		<header class="section-header">
 			<h1><?php the_title();?></h1>
+			<hr class="hr-small hr-dark">
+		</header>
+			
 	</div>
 	
 	<?php 
@@ -39,8 +43,11 @@
 	<?php endif ;?>
 	<?php while (have_posts()) : the_post(); ?>
 		<div class="row center">
-			<h1>Press Inquieries</h1>
-			<div class="small-12 small-centered columns">
+			<header class="section-header">
+				<h1>Press Inquieries</h1>
+				<hr class="hr-small hr-dark">
+			</header>
+			<div class="small-12 medium-8 medium-centered large-8 large-centered columns">
 				<?php the_content();?>
 			</div>
 		</div>

@@ -27,10 +27,13 @@
 			</div>
 		</div class="row">
 	</section>
-	<section class="about center">
+	<section class="center">
 		<div class="row">
 			<div class="small-12 medium-centered medium-10  large-centered large-10 columns">
-				<h1><?php the_title();?></h1>
+				<header class="section-header">
+					<h1><?php the_title();?></h1>
+					<hr class="hr-small hr-dark">
+				</header>
 				<?php the_content();?>
 			</div>
 		</div>
