@@ -100,49 +100,61 @@ if ( ! function_exists( 'add_menuclass') ) {
 */
 
 
-function register_menus() {
-	register_nav_menus(
-		array(
-			'main-nav-left' => 'Main Navigation Left Side',
-			'main-nav-right' => 'Main Navigation Right Side'
-		)
-	);
-}
-add_action( 'init', 'register_menus' );
+// function register_menus() {
+// 	register_nav_menus(
+// 		array(
+// 			'main-nav-left' => 'Main Navigation Left Side',
+// 			'main-nav-right' => 'Main Navigation Right Side'
+// 		)
+// 	);
+// }
+// add_action( 'init', 'register_menus' );
 
 
-function main_navigation_left() {
-	    wp_nav_menu(array( 
-	        'container' 				=> '',						// remove nav container
-	        'container_class' 		=> 'main-nav-left',		// class of container
-	        'container_id'    		=> 'main-nav-left',   	// class of id
-	        'menu' 					=> '',                   // menu name
-	        'menu_class' 			=> 'main-nav-left',    // adding custom nav class
-	        'theme_location' 		=> 'main-nav-left',    // where it's located in the theme
-	        'before'				 	=> '',                   // before each link <a> 
-	        'after' 					=> '',                   // after each link </a>
-	        'link_before' 			=> '',                  	// before each link text
-	        'link_after' 				=> '',                   // after each link text
-	        'depth' 					=> 5,                    // limit the depth of the nav
-	        'fallback_cb' 			=> false                 // fallback function (see below)
-	    ));
-	}
+// function main_navigation_left() {
+// 	    wp_nav_menu(array( 
+// 	        'container' 				=> '',						// remove nav container
+// 	        'container_class' 		=> 'main-nav-left',		// class of container
+// 	        'container_id'    		=> 'main-nav-left',   	// class of id
+// 	        'menu' 						=> '',                   // menu name
+// 	        'menu_class' 			=> 'main-nav-left',    // adding custom nav class
+// 	        'theme_location' 		=> 'main-nav-left',    // where it's located in the theme
+// 	        'before'				 	=> '',                   // before each link <a> 
+// 	        'after' 					=> '',                   // after each link </a>
+// 	        'link_before' 			=> '',                  	// before each link text
+// 	        'link_after' 				=> '',                   // after each link text
+// 	        'depth' 					=> 5,                    // limit the depth of the nav
+// 	        'fallback_cb' 			=> false                 // fallback function (see below)
+// 	    ));
+// 	}
 
-	function main_navigation_right() {
-		    wp_nav_menu(array( 
-	        'container' 			=> '',							// remove nav container
-	        'container_class' 	=> 'main-nav-right',		// class of container
-	        'container_id'    	=> 'main-nav-right',		// class of id
-	        'menu' 				=> '',							// menu name
-	        'menu_class' 		=> 'main-nav-right',		// adding custom nav class
-	        'theme_location' 	=> 'main-nav-right',		// where it's located in the theme
-	        'before' 				=> '',							// before each link <a> 
-	        'after' 				=> '',							// after each link </a>
-	        'link_before' 		=> '',							// before each link text
-	        'link_after' 			=> '',							// after each link text
-	        'depth' 				=> 5,								// limit the depth of the nav
-	        'fallback_cb' 		=> false							// fallback function (see below)
-		    ));
+	// function main_navigation_right() {
+	// 	    wp_nav_menu(array( 
+	//         'container' 			=> '',							// remove nav container
+	//         'container_class' 	=> 'main-nav-right',		// class of container
+	//         'container_id'    	=> 'main-nav-right',		// class of id
+	//         'menu' 					=> '',							// menu name
+	//         'menu_class' 		=> 'main-nav-right',		// adding custom nav class
+	//         'theme_location' 	=> 'main-nav-right',		// where it's located in the theme
+	//         'before' 				=> '',							// before each link <a> 
+	//         'after' 				=> '',							// after each link </a>
+	//         'link_before' 		=> '',							// before each link text
+	//         'link_after' 			=> '',							// after each link text
+	//         'depth' 				=> 5,								// limit the depth of the nav
+	//         'fallback_cb' 		=> false							// fallback function (see below)
+	// 	    ));
+	// 	}
+
+
+		// clean these navigations up!
+		function theme_menu_left() {
+		    register_nav_menu( 'left', 'Main Navigation Left' );
 		}
+		add_action( 'init', 'theme_menu_left' );
+		// clean these navigations up!
+		function theme_menu_right() {
+		    register_nav_menu( 'right', 'Main NavigationRight' );
+		}
+		add_action( 'init', 'theme_menu_right' );
 
 ?>

@@ -8,8 +8,11 @@
 ?>
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post(); ?>
-
-	<?php the_field('image_slider');?>
+	<section class="slider">
+		<a class="small-link" href="#about">Scroll Down</a>
+		<?php the_field('image_slider');?>	
+	</section>
+	
 
 	<section class="full color center">
 		<div class="arrow-down"></div>
@@ -27,7 +30,7 @@
 			</div>
 		</div class="row">
 	</section>
-	<section class="center">
+	<section class="center" id="about">
 		<div class="row">
 			<div class="small-12 medium-centered medium-10  large-centered large-10 columns">
 				<header class="section-header">

@@ -1,11 +1,21 @@
 $(document).ready(function(){
-	console.log('hello');
-	$('.acf-map').each(function(){
-
-		render_map( $(this) );
-
+	$('.acf-map').each(function(){render_map( $(this) );});
+	$('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	$('.small').on('click', function(e){
+		e.preventDefault();
+		$('.site-nav').slideToggle(400);
 	});
-	console.log('after map');
 });
 
 function render_map( $el ) {

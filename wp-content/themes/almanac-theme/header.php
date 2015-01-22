@@ -34,12 +34,33 @@
 	<body <?php body_class(); ?>>
 	
 	
-	<div class="main-nav">
-	 	<?php main_navigation_left(); ?>
-		<a class="logo nav-toggle mobile-only" href="#">Almanac</a>
-		<?php main_navigation_left(); ?>
-		<a href="#" class="desktop-only"><h1>Almanac</h1></a>
+	<div class="main-nav" role="navigation">
+		<div class="row">
+			<div class="site-nav">
+
+				<?php wp_nav_menu( 
+					array(  
+						'theme_location' => 'left',
+						'container'       => 'div',
+						'container_class' => 'nav-list nav-left',
+					)
+				); ?>
+				<a class="large logo" href="#">
+					<img src="<?php bloginfo('template_directory'); ?>/img/logo.svg" alt="">
+				</a>
+				<?php wp_nav_menu( 
+					array(  
+						'theme_location' => 'right',
+						'container'       => 'div',
+						'container_class' => 'nav-list nav-right',
+					)
+				); ?>
+				<ul>
+					<li><a href="<?php bloginfo('url');?>" class="small-link">Home</a></li>
+				</ul>
+			</div>
+		 	
+			<a class="logo small mobile-logo" href="#">Alamanac</a>
+		</div>
 	</div>
 	<div class="container"  id="page-<?php the_ID(); ?>">
-		
-	
