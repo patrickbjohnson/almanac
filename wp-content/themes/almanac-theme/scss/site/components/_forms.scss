@@ -21,8 +21,9 @@
   textarea {
     padding: 25px 15px;
     font-size: em(18px);
-    background: map-get($colors, 'offWhite');
-    border: 1px solid map-get($colors, 'black');
+    background: map-get($colors, 'gray');
+    border: 0;
+    // border: 1px solid map-get($colors, 'black');
     margin-top: 5px;
     margin-bottom: 30px;
   }
@@ -46,8 +47,9 @@
   input[type="url"]:focus, 
   input[type="color"]:focus, 
   textarea:focus {
-    background: lighten(map-get($colors, 'offWhite'), 2%);
-    border: 1px solid map-get($colors, 'black'); 
+    background: lighten(map-get($colors, 'gray'), 2%);
+    border: 0;
+    // border: 1px solid map-get($colors, 'black'); 
     box-shadow: none;
   }
 

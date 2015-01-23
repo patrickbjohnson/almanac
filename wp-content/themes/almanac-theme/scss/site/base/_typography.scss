@@ -22,16 +22,15 @@ body, .copy, %copy  {
 
 h1,h2,h3,h4,h5,h6, %header {
   margin: 0;
-  font-weight: bold;
   line-height: 1;
   text-shadow: none;
   font-family: $headline;
 }
 
 h1 {
-  font-size: 1.625em;
+  font-size: em(26px);
   @media #{$medium-up} {
-    font-size: 1.875em;
+    font-size: em(30px);
   }
 }
 
@@ -47,9 +46,14 @@ p {
   -webkit-backface-visibility: hidden;}
 a {
   font-family: $didot;
+  color: map-get($colors, 'red');
   cursor: pointer;
   &:hover {text-decoration: none;}
+}
 
+.almanac-overlay {
+  text-align: left;
+  a {color: map-get($colors, 'white');}
 }
 
 q {display: block;}

@@ -76,16 +76,16 @@
 @media (min-width: 800px){
    .nav-list {
     width: 40%;
-      li a {
+      a {
       display: block;
       font-size: em(14px);
       color: map-get($colors, 'black');
       text-transform: uppercase; 
       &:hover {
         color: map-get($colors, 'red');
-        text-decoration: underline;
        }
      }
+     .current-menu-item a {color: map-get($colors, 'red');}
    }
    // left nav
    .nav-left {

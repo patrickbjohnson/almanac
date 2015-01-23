@@ -39,7 +39,9 @@ hr.hr-dark {
 
 
 header.section-header {
-  display: inline-block;
-  hr.hr-small {width: 100%;}
+
+  display: block;
+  text-align: center;
+  // hr.hr-small {width: 100%;}
 }
 

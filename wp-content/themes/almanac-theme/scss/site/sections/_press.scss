@@ -1,3 +1,4 @@
+.press {margin-bottom: 50px;}
 .press-item {
 	margin-bottom: 15px;
 		@media #{$medium-up} {
@@ -25,6 +26,11 @@
 		@media #{$medium-up} {
 			font-size: em(16px);
 	  }
+	}
+
+	.press-image {
+		height: 200px;
+		overflow: hidden;
 	}
 	
 }

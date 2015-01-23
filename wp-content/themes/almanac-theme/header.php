@@ -22,7 +22,7 @@
 		} ?></title>
 		<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/7ac99170-d19e-4fa7-8d98-68308496f559.css"/>
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/foundation.css" />
-		<link rel="icon" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="<?php echo get_stylesheet_directory_uri() ; ?>/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
@@ -45,7 +45,7 @@
 						'container_class' => 'nav-list nav-left',
 					)
 				); ?>
-				<a class="large logo" href="#">
+				<a class="large logo" href="<?php bloginfo('url');?>">
 					<img src="<?php bloginfo('template_directory'); ?>/img/logo.svg" alt="">
 				</a>
 				<?php wp_nav_menu( 
@@ -59,8 +59,7 @@
 					<li><a href="<?php bloginfo('url');?>" class="small-link">Home</a></li>
 				</ul>
 			</div>
-		 	
-			<a class="logo small mobile-logo" href="#">Alamanac</a>
+			<a class="logo small mobile-logo" href="<?php bloginfo('url');?>">Alamanac</a>
 		</div>
 	</div>
 	<div class="container"  id="page-<?php the_ID(); ?>">

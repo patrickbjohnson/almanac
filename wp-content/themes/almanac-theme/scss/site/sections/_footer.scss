@@ -1,58 +1,27 @@
-// .footer {
-//   @include clear;
-//   padding: 50px 0;
-//   background: #01629F;
-
-//   .container { display: table; width: 1024px;}
-// }
-
-// .footer-branding, .footer-meta {
-//   display: table-cell;
-//   vertical-align: middle;
-// }
-
-// .footer-branding {width: 400px;}
-
-// .footer-logo {
-//   margin-bottom: 20px;
-//   padding: 0;
-//   width: 135px;
-// }
-
-// .footer-meta {
-//   padding: 15px 25px;
-//   border-left: 1px solid white;
-  
-//   p { 
-//     margin-bottom: 20px;
-//     line-height: 1; 
-//   }
-//   cite { font-size: 11px; }
-// }
-
-// .footer-social {
-//   a, span {
-//     display: inline-block;
-//     vertical-align: middle;
-//   }
-//   a {
-//     font-size: 2em;
-//     line-height: 1;
-//   }
-//   span {
-//     font-size: 11px;
-//     padding: 0 12px 0 8px;
-//     margin-top: -8px;
-//   }
-// }
-
-// .footer-links {
-//   margin-top: 40px;
-//   a {color: $white;}
-// }
+.wordmark {
+  // max-width: 200px;
+}
 .footer {
-  margin-top: 50px;
+  margin-top: 25px;
   padding-bottom: 25px;
+
+  .logo  {
+    display: block;
+    margin: 0 auto 20px;
+    width: 200px;
+    img {width: 100%;}
+    @media #{$large-up}{
+      width: 300px;
+    }
+  }
+  hr.hr-large {
+    width: 98%;
+    margin-bottom: 25px;
+    &:after {
+      content: "\e605";
+      top: -15px;
+    }
+  }
 }
 .footer .ss-social li {
   display: inline-block;

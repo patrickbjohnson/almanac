@@ -16,6 +16,9 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('.site-nav').slideToggle(400);
 	});
+
+	var realWidth = $(".ms-slide-layers").width();
+	console.log(realWidth);
 });
 
 function render_map( $el ) {
@@ -31,22 +34,23 @@ function render_map( $el ) {
 		scrollwheel: false,
 	};
 
+	// styles
+	var styles = [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}];
+
+
+
 	// create map	        	
 	var map = new google.maps.Map( $el[0], args);
 
 	// add a markers reference
 	map.markers = [];
 
+	map.setOptions({styles: styles});
+
 	// add markers
-	$markers.each(function(){
-
-    	add_marker( $(this), map );
-
-	});
-
+	$markers.each(function(){add_marker( $(this), map );});
 	// center map
 	center_map( map );
-
 }
 
 /*
@@ -87,8 +91,7 @@ function add_marker( $marker, map ) {
 	map.markers.push( marker );
 
 	// if marker contains HTML, add it to an infoWindow
-	if( $marker.html() )
-	{
+	if($marker.html()){
 		// create info window
 		var infowindow = new google.maps.InfoWindow({
 			content		: $marker.html()
@@ -124,11 +127,8 @@ function center_map( map ) {
 
 	// loop through all markers and create bounds
 	$.each( map.markers, function( i, marker ){
-
 		var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
-
 		bounds.extend( latlng );
-
 	});
 
 	// only 1 marker?

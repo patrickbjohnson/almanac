@@ -81,6 +81,7 @@
 			$marker 	 = get_field('almanac_restaurant_marker', 'option');
 			$locationString = $location['address'];
 			$address = explode(',', $locationString);
+			var_dump();
 			if( !empty($location) ):?>
 			<div class="acf-map">
 				<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>" data-marker="<?php echo $marker;?>"></div>
@@ -91,10 +92,10 @@
 			   <!-- <span class="fn org"></span>  -->
 			     <div class="adr"> 
 			        <span class="street-address"><?php echo $address[0];?></span>
-			        <span class="locality"><?php echo $address[1];?></span>, <span class="region"><?php echo $address[2];?></span><a class="map" href="https://www.google.com/maps/dir/''/almanac+nyc/@40.7306455,-74.0049269,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c25992e7b72be5:0x8337e3394883cfa8!2m2!1d-74.004892!2d40.730504" target="_blank">{Map}</a>
+			        <span class="locality"><?php echo $address[1];?></span>, <span class="region"><?php echo $address[2];?></span><a class="map" href="http://maps.google.com/?q=<?php echo $location['address'];?>" target="_blank">{Map}</a>
 			     </div> 
 			     <div class="contact">
-			     	<a class="email" href="mailto">email@info.com</a>
+			     	<a class="email" href="mailto:<?php the_field('almanac_restaurant_email', 'option');?>"><?php the_field('almanac_restaurant_email', 'option');?></a>
 			     	P:<a class="tel" href="tel:+2122551795"><?php the_field('almanac_restaurant_phone', 'option');?></a>
 					F:<a class="fax" href="fax:+2122551720"><?php the_field('almanac_restaurant_fax', 'option');?></a>				
 			     </div>
@@ -117,10 +118,10 @@
 			<div class="vcard">
 			     <div class="adr"> 
 			        <span class="street-address"><?php echo $address[0];?></span>
-			        <span class="locality"><?php echo $address[1];?></span>, <span class="region"><?php echo $address[2];?></span><a class="map" href="https://www.google.com/maps/place/Mas+(farmhouse)/@40.729357,-74.003963,17z/data=!3m1!4b1!4m2!3m1!1s0x89c259928945387b:0xd367d8e9087ab8fb" target="_blank">{Map}</a>
+			        <span class="locality"><?php echo $address[1];?></span>, <span class="region"><?php echo $address[2];?></span><a class="map" href="http://maps.google.com/?q=<?php echo $location['address'];?>" target="_blank">{Map}</a>
 			     </div> 
 			     <div class="contact">
-			     	<a class="email" href="mailto">email@info.com</a>
+			     	<a class="email" href="mailto:<?php the_field('mas_restaurant_email', 'option');?>"><?php the_field('mas_restaurant_email', 'option');?></a>
 			     	P:<a class="tel" href="tel:+2122551795"><?php the_field('mas_restaurant_phone', 'option');?></a>
 					F:<a class="fax" href="fax:+2122551720"><?php the_field('mas_restaurant_fax', 'option');?></a>				
 			     </div>
