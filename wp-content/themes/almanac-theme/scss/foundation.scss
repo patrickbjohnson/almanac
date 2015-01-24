@@ -55,9 +55,11 @@
   My custom styles:
   Add your own folders and scss files for your project and import them below
 */ 
-@import "site/helpers/functions"; 
-
 @import "site/base/variables"; 
+@import "site/helpers/functions"; 
+@import "site/helpers/mixins"; 
+
+
 @import "site/base/base"; 
 @import "site/base/typography"; 
 

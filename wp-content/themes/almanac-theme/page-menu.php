@@ -6,7 +6,7 @@
 ?>
 <?php get_header(); ?>
 
-<section class="full color center">
+<section class="full color section-bottom center">
 	<div class="row">
 		<div class="small-12 medium-12 large-12 ">
 			<header class="section-header">
@@ -26,13 +26,16 @@
 	$args = array( 'post_type' => 'almanac_dish');
 	$loop = new WP_Query( $args );
 	$custom = get_field('custom_menu_title');
+
 ?>
 
-<section class="menu menu-three-course center">
+<section class="food-menu menu-three-course center">
 	<div class="row">
 		<header class="menu-header">
 			<h1>Three Course Tasting Menu</h1>
-			<span><?php the_field('three_course_menu_price', 'option'); ?></span>
+			<span>
+				MEnu Price shoudl be here
+			</span>
 		</header>
 		
 		<div class="small-12 medium-4 large-4 columns">
@@ -45,9 +48,20 @@
 				while ($loop->have_posts()) : 
 					$loop->the_post();
 					if( in_category('3-course') && has_term('appetizer', 'dish_type') ) : ?>
-						<div class="menu-item">
-							<h1 class="menu-item--title"><?php the_title();?></h1>
-							<div class="menu-item--description">
+					<?php 
+
+
+						// var_dump($category);
+
+
+
+										// echo '<pre>';
+										// var_dump(get_the_category($post->ID));
+										// echo '</pre>';
+										?>
+						<div class="food-menu-item">
+							<h1 class="food-menu-item--title"><?php the_title();?></h1>
+							<div class="food-menu-item--description">
 								<?php the_content(); ?>
 							</div>
 						</div>
@@ -66,9 +80,9 @@
 				while ($loop->have_posts()) : 
 					$loop->the_post();
 					if( in_category('3-course') && has_term('main', 'dish_type') ) : ?>
-						<div class="menu-item">
-							<h1 class="menu-item--title"><?php the_title();?></h1>
-							<div class="menu-item--description">
+						<div class="food-menu-item">
+							<h1 class="food-menu-item--title"><?php the_title();?></h1>
+							<div class="food-menu-item--description">
 								<?php the_content(); ?>
 							</div>
 						</div>
@@ -86,9 +100,9 @@
 				while ($loop->have_posts()) : 
 					$loop->the_post();
 					if( in_category('3-course') && has_term('dessert', 'dish_type') ) : ?>
-						<div class="menu-item">
-							<h1 class="menu-item--title"><?php the_title();?></h1>
-							<div class="menu-item--description">
+						<div class="food-menu-item">
+							<h1 class="food-menu-item--title"><?php the_title();?></h1>
+							<div class="food-menu-item--description">
 								<?php the_content(); ?>
 							</div>
 						</div>
@@ -99,7 +113,7 @@
 	</div>
 </section>
 <hr class="hr-large hr-dark">
-<section class="menu menu-five-course center">
+<section class="food-menu menu-five-course center">
 	<div class="row">
 		<div class="small-12 medium-8 medium-centered large-8 large-centered columns">
 			<header class="menu-header">
@@ -111,27 +125,27 @@
 				while ($loop->have_posts()) : 
 					$loop->the_post();
 					if (in_category('5-course') && has_term('appetizer', 'dish_type')) :?>
-						<div class="menu-item">
-							<h1 class="menu-item--title"><?php the_title();?></h1>
-							<div class="menu-item--description">
+						<div class="food-menu-item">
+							<h1 class="food-menu-item--title"><?php the_title();?></h1>
+							<div class="food-menu-item--description">
 								<?php the_content(); ?>
 							</div>
 						</div>
 					<?php endif ; ?>
 
 					<?php if (in_category('5-course') && has_term('main', 'dish_type')) :?>
-						<div class="menu-item">
-							<h1 class="menu-item--title"><?php the_title();?></h1>
-							<div class="menu-item--description">
+						<div class="food-menu-item">
+							<h1 class="food-menu-item--title"><?php the_title();?></h1>
+							<div class="food-menu-item--description">
 								<?php the_content(); ?>
 							</div>
 						</div>
 					<?php endif ; ?>
 
 					<?php if (in_category('5-course') && has_term('dessert', 'dish_type')) :?>
-						<div class="menu-item">
-							<h1 class="menu-item--title"><?php the_title();?></h1>
-							<div class="menu-item--description">
+						<div class="food-menu-item">
+							<h1 class="food-menu-item--title"><?php the_title();?></h1>
+							<div class="food-menu-item--description">
 								<?php the_content(); ?>
 							</div>
 						</div>
@@ -144,7 +158,7 @@
 	
 </section>
 <hr class="hr-large hr-dark">
-<section class="menu menu-eight-course center">
+<section class="food-menu menu-eight-course center">
 	<div class="row">
 		<div class="small-12 medium-8 medium-centered large-8 large-centered columns">
 			<header class="menu-header">
@@ -156,27 +170,27 @@
 				while ($loop->have_posts()) : 
 					$loop->the_post();
 					if (in_category('8-course') && has_term('appetizer', 'dish_type')) :?>
-						<div class="menu-item">
-							<h1 class="menu-item--title"><?php the_title();?></h1>
-							<div class="menu-item--description">
+						<div class="food-menu-item">
+							<h1 class="food-menu-item--title"><?php the_title();?></h1>
+							<div class="food-menu-item--description">
 								<?php the_content(); ?>
 							</div>
 						</div>
 					<?php endif ; ?>
 
 					<?php if (in_category('8-course') && has_term('main', 'dish_type')) :?>
-						<div class="menu-item">
-							<h1 class="menu-item--title"><?php the_title();?></h1>
-							<div class="menu-item--description">
+						<div class="food-menu-item">
+							<h1 class="food-menu-item--title"><?php the_title();?></h1>
+							<div class="food-menu-item--description">
 								<?php the_content(); ?>
 							</div>
 						</div>
 					<?php endif ; ?>
 
 					<?php if (in_category('8-course') && has_term('dessert', 'dish_type')) :?>
-						<div class="menu-item">
-							<h1 class="menu-item--title"><?php the_title();?></h1>
-							<div class="menu-item--description">
+						<div class="food-menu-item">
+							<h1 class="food-menu-item--title"><?php the_title();?></h1>
+							<div class="food-menu-item--description">
 								<?php the_content(); ?>
 							</div>
 						</div>
@@ -191,7 +205,7 @@
 
 <?php if($custom) : ?>
 	<hr class="hr-large hr-dark">
-	<section class="menu menu-eight-course center">
+	<section class="food-menu menu-eight-course center">
 		<div class="row">
 			<div class="small-12 medium-8 medium-centered large-8 large-centered columns">
 			<header class="menu-header">
@@ -203,27 +217,27 @@
 			while ($loop->have_posts()) : 
 				$loop->the_post();
 				if (in_category('custom-menu') && has_term('appetizer', 'dish_type')) :?>
-					<div class="menu-item">
-						<h1 class="menu-item--title"><?php the_title();?></h1>
-						<div class="menu-item--description">
+					<div class="food-menu-item">
+						<h1 class="food-menu-item--title"><?php the_title();?></h1>
+						<div class="food-menu-item--description">
 							<?php the_content(); ?>
 						</div>
 					</div>
 				<?php endif ; ?>
 
 				<?php if (in_category('custom-menu') && has_term('main', 'dish_type')) :?>
-					<div class="menu-item">
-						<h1 class="menu-item--title"><?php the_title();?></h1>
-						<div class="menu-item--description">
+					<div class="food-menu-item">
+						<h1 class="food-menu-item--title"><?php the_title();?></h1>
+						<div class="food-menu-item--description">
 							<?php the_content(); ?>
 						</div>
 					</div>
 				<?php endif ; ?>
 
 				<?php if (in_category('custom-menu') && has_term('dessert', 'dish_type')) :?>
-					<div class="menu-item">
-						<h1 class="menu-item--title"><?php the_title();?></h1>
-						<div class="menu-item--description">
+					<div class="food-menu-item">
+						<h1 class="food-menu-item--title"><?php the_title();?></h1>
+						<div class="food-menu-item--description">
 							<?php the_content(); ?>
 						</div>
 					</div>
@@ -239,7 +253,7 @@
 <?php endif; ?>
 
 
-<section class="menu menu-footer menu-notice center">
+<section class="food-menu menu-footer menu-notice center">
 	<p>We welcome any substitutions and happily allow all dishes to be enjoyed á la carte.</p>
 </section>
 

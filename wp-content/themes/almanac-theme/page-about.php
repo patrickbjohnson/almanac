@@ -8,7 +8,7 @@
 ?>
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post(); ?>
-	<section class="full color about center">
+	<section class="full color section-bottom about center">
 		<div class="row">
 			<div class="small-12 medium-12 large-12 columns">
 				<header class="section-header">
@@ -72,7 +72,7 @@
 	<div class="row center">
 		<header class="section-header">
 			<h1>Location</h1>
-			<hr class="hr-large hr-dark">
+			<hr class="hr-small hr-dark">
 		</header>
 		<p>Almanac and our sister restaurant, Mas Farmhouse, are both located in Manhattan’s West Village neighorhood.</p>
 		<div class="small-12 medium-6 large-6 center columns">

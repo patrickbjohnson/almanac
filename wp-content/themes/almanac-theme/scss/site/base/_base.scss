@@ -51,15 +51,20 @@ ul {
     z-index: 10;
 }
 
-// a {
-// 	color: map-get($colors, 'black');
-// 	&:link,
-// 	&:visited,
-// 	&:active {
-// 		color: map-get($colors, 'black');
-// 	}
-// 	&:hover {
-// 		color: map-get($colors, 'red');
-// 		text-decoration: underline;
-// 	}
-// }
+.section-bottom {
+	margin-bottom: 50px;
+	&:after {
+		content: "";
+		width: 0;
+		height: 40px;
+		border-left: 40px solid transparent;
+		border-right: 40px solid transparent;
+		border-top: 40px solid map-get($colors, 'red');
+		position: absolute;
+		bottom: -40px;
+		margin: auto;
+		display: block;
+		left: 0;
+		right: 0;
+	}
+}
