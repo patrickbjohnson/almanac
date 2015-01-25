@@ -67,3 +67,7 @@
 		border-left: 1px solid map-get($colors, black);
   }
 }
+
+.menu-footer P {
+	color: map-get($colors, 'red');
+}

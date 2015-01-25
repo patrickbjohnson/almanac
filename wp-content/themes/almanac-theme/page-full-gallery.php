@@ -13,7 +13,7 @@
 					<div class="small-12 medium-12 large-12">
 						<header class="section-header">
 							<h1><?php the_title();?></h1>
-							<hr class="hr-small hr-dark">
+							<hr class="page-divide hr-small hr-dark">
 							
 
 						</header>

@@ -1,9 +1,10 @@
 .main-nav {
   width: 100%;
-  @media (min-width: 800px){
-    position: relative;
-    overflow: hidden;
-  }
+  position: fixed;
+  z-index: 100;
+  background: map-get($colors, 'white');
+  text-align: center;
+  @media (min-width: 800px){overflow: hidden;}
   // styles for mobile nav anchor
   .small-link {
     display: block;
@@ -71,6 +72,27 @@
   }
 }
 
+.site-nav {
+  display: block;
+  position: relative;
+  // overflow: hidden;
+  // &:after {
+  //   content: "";
+  //   display: block;
+  //   margin: auto;
+  //   width: 300px;
+    // -webkit-box-shadow: 0 8px 6px -6px black;
+    //    -moz-box-shadow: 0 8px 6px -6px black;
+    //           box-shadow: 0 8px 6px -6px black;
+              background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 75%);
+              background: -webkit-gradient(radial, center center, 0px, center center, 75%, color-stop(0%,rgba(0,0,0,0.1)), color-stop(75%,rgba(0,0,0,0)));
+              background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+              background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+              background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+              background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+     // background-image: radial-gradient(center 0, circle farthest-corner, rgba(255,255,255,0.4), rgba(255,255,255,0));
+  }
+  
 
 @media (min-width: 800px){
    .nav-list {

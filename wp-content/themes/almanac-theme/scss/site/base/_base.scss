@@ -1,6 +1,13 @@
 html, body {
     -webkit-backface-visibility: hidden;
 }
+
+.container {
+	padding-top: 55px;
+	@media (min-width: 800px){
+		padding-top: 82px;
+	}
+}
 section {
 	position: relative;
 	padding: 15px;
@@ -51,7 +58,7 @@ ul {
     z-index: 10;
 }
 
-.section-bottom {
+.page-intro {
 	margin-bottom: 50px;
 	&:after {
 		content: "";
@@ -67,4 +74,61 @@ ul {
 		left: 0;
 		right: 0;
 	}
+
+	p {
+		margin-bottom: 0;
+	}
 }
+
+hr.style-two { 
+    border: 0; 
+    height: 1px;
+    position: relative;
+    margin: 0.5em 0; /* Keep other elements away from pseudo elements*/
+}
+hr.style-two:before {
+    top: -0.5em;
+    height: 1em;
+}
+hr.style-two:after {
+    content:'';
+    height: 0.5em;   /* half the height of :before */
+    bottom: 1px;      /* height of */
+}
+
+hr.style-two:before,
+hr.style-two:after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: block;
+}
+
+hr.style-two,
+hr.style-two:before {
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 75%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 75%, color-stop(0%,rgba(0,0,0,0.1)), color-stop(75%,rgba(0,0,0,0)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+}
+
+// .divider-outside-bottom {
+//   position:relative;
+// }
+// .divider-outside-bottom:before {
+//   content: ""; 
+//   position:absolute; 
+//   z-index: -1; 
+//   width:96%;  
+//   bottom: 0; 
+//   height: 10px; 
+//   left: 2%; 
+//   border-radius: 100px / 5px; 
+//   box-shadow:0 0 18px rgba(0,0,0,0.6); 
+// }
+

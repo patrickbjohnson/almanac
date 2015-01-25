@@ -4,7 +4,7 @@
 	<div class="logo">
 		<img class="wordmark" src="<?php bloginfo('template_directory'); ?>/img/almanac-wordmark.svg" alt="">	
 	</div>
-	<hr class="hr-large hr-dark">
+	<hr class="page-divide hr-large hr-dark">
 	
 	<div class="row">
 		<div class="small-12 medium-centered medium-6 large-centered large-6 columns">

@@ -8,12 +8,12 @@
 ?>
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post(); ?>
-	<section class="full color section-bottom about center">
+	<section class="full color page-intro about center">
 		<div class="row">
 			<div class="small-12 medium-12 large-12 columns">
 				<header class="section-header">
 					<h1><?php the_title();?></h1>
-					<hr class="hr-small hr-light">
+					<hr class="page-divide hr-small hr-light">
 				</header>
 				<?php the_content();?>
 			</div>
@@ -32,7 +32,7 @@
 	<div class="row">
 		<header class="section-header">
 				<h1>Our Team</h1>
-				<hr class="hr-small hr-dark">
+				<hr class="page-divide hr-small hr-dark">
 		</header>
 		<?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>	
 			<?php if( has_term('head-chef', 'staff_role')) :?>
@@ -56,7 +56,7 @@
 			<?php endif;?>
 		<?php endwhile ;endif; ?>
 	</div>	
-	<hr class="hr-large hr-dark">
+	<hr class="page-divide hr-large hr-dark">
 	<div class="row">
 		<?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>	
 			<?php if( has_term('staff', 'staff_role')) :?>
@@ -67,12 +67,15 @@
 			<?php endif;?>
 		<?php endwhile ;endif; ?>
 	</div>
+	<hr class="section-divide">
 </section>
+
 <section class="full location center">
+
 	<div class="row center">
 		<header class="section-header">
 			<h1>Location</h1>
-			<hr class="hr-small hr-dark">
+			<hr class="page-divide hr-small hr-dark">
 		</header>
 		<p>Almanac and our sister restaurant, Mas Farmhouse, are both located in Manhattan’s West Village neighorhood.</p>
 		<div class="small-12 medium-6 large-6 center columns">

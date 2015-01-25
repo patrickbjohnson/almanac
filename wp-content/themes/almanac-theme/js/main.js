@@ -1,4 +1,11 @@
 $(document).ready(function(){
+	$(window).resize(function(){
+		if ($(window).width() > 800){
+			$('.site-nav').css({'display': 'block'});
+		} else {
+			$('.site-nav').css({'display': 'none'});
+		}
+	});
 	$('.acf-map').each(function(){render_map( $(this) );});
 	$('a[href*=#]:not([href=#])').click(function() {
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

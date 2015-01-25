@@ -11,7 +11,7 @@
 		<div class="row center">
 			<header class="section-header">
 				<h1><?php the_title();?></h1>
-				<hr class="hr-small hr-dark">
+				<hr class="page-divide hr-small hr-dark">
 			</header>
 		</div>
 	</section>

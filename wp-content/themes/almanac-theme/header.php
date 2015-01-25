@@ -33,33 +33,35 @@
 	</head>
 	<body <?php body_class(); ?>>
 	
-	
-	<div class="main-nav" role="navigation">
-		<div class="row">
-			<div class="site-nav">
+	<div class="fixed">
+		<div class="main-nav" role="navigation">
+			<div class="row">
+				<div class="site-nav">
 
-				<?php wp_nav_menu( 
-					array(  
-						'theme_location' => 'left',
-						'container'       => 'div',
-						'container_class' => 'nav-list nav-left',
-					)
-				); ?>
-				<a class="large logo" href="<?php bloginfo('url');?>">
-					<img src="<?php bloginfo('template_directory'); ?>/img/logo.svg" alt="">
-				</a>
-				<?php wp_nav_menu( 
-					array(  
-						'theme_location' => 'right',
-						'container'       => 'div',
-						'container_class' => 'nav-list nav-right',
-					)
-				); ?>
-				<ul>
-					<li><a href="<?php bloginfo('url');?>" class="small-link">Home</a></li>
-				</ul>
+					<?php wp_nav_menu( 
+						array(  
+							'theme_location' => 'left',
+							'container'       => 'div',
+							'container_class' => 'nav-list nav-left',
+						)
+					); ?>
+					<a class="large logo" href="<?php bloginfo('url');?>">
+						<img src="<?php bloginfo('template_directory'); ?>/img/logo.svg" alt="">
+					</a>
+					<?php wp_nav_menu( 
+						array(  
+							'theme_location' => 'right',
+							'container'       => 'div',
+							'container_class' => 'nav-list nav-right',
+						)
+					); ?>
+					<ul>
+						<li><a href="<?php bloginfo('url');?>" class="small-link">Home</a></li>
+					</ul>
+				</div>
+				<a class="logo small mobile-logo" href="<?php bloginfo('url');?>">Alamanac</a>
 			</div>
-			<a class="logo small mobile-logo" href="<?php bloginfo('url');?>">Alamanac</a>
 		</div>
 	</div>
+	
 	<div class="container"  id="page-<?php the_ID(); ?>">
