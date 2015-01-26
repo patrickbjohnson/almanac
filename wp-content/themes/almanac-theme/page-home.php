@@ -35,7 +35,7 @@
 			<div class="small-12 medium-centered medium-10  large-centered large-10 columns">
 				<header class="section-header">
 					<h1><?php the_title();?></h1>
-					<hr class="hr-small hr-dark">
+					<hr class="page-divide hr-small hr-dark">
 				</header>
 				<?php the_content();?>
 			</div>
