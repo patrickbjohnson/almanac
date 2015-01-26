@@ -116,7 +116,7 @@
 				<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>" data-marker="<?php echo $marker;?>"></div>
 			</div>
 			<?php endif; ?>
-			<img src="<?php the_field('mas_restaurant_logo', 'option');?>" alt="" width="300">
+			<img class="logo" src="<?php the_field('mas_restaurant_logo', 'option');?>" alt="" width="300">
 			
 			<div class="vcard">
 			     <div class="adr"> 
