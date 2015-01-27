@@ -4,7 +4,7 @@
   text-align: center;
   display: block;
   margin: auto;
-  margin: 15px auto 45px;
+  margin: 15px auto 25px;
   border-top: 1px solid;
   &:after {
     content: "\e604";
@@ -41,62 +41,26 @@
 header.section-header {
   display: block;
   text-align: center;
+
 }
 
+.color header.section-header h1 {
+  color: map-get($colors, 'white');
+}
 
 hr.section-divide {
   display: block;
   width: 400px;
   margin: auto;
   border: 0;
-  
+  &:after { 
+    display: block; 
+    content:'';
+    height: 20px;
+    background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 116, color-stop(0%, #E8E8E8), color-stop(85%, rgba(255, 255, 255, 0)));
+    background-image: -webkit-radial-gradient(center top, farthest-side, #E8E8E8 0%, rgba(255, 255, 255, 0) 85%);
+    background-image: -moz-radial-gradient(center top, farthest-side, #E8E8E8 0%, rgba(255, 255, 255, 0) 85%);
+    background-image: -o-radial-gradient(center top, farthest-side, #E8E8E8 0%, rgba(255, 255, 255, 0) 85%);
+    background-image: radial-gradient(farthest-side at center top, #E8E8E8 0%, rgba(255, 255, 255, 0) 85%);
+  }
 }
-hr.section-divide::after { 
-  display: block; 
-  content:'';
-  height: 20px;
-  background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 116, color-stop(0%, #cccccc), color-stop(90%, rgba(255, 255, 255, 0)));
-  background-image: -webkit-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 90%);
-  background-image: -moz-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 90%);
-  background-image: -o-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 90%);
-  background-image: radial-gradient(farthest-side at center top, #cccccc 0%, rgba(255, 255, 255, 0) 90%);
-}
-
-
-
-
-
-
-hr.divide {
-  height: 1px;
-  margin: 50px 0;
-  background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0,0,0,0)), color-stop(0.5, #333333), to(rgba(0,0,0,0)));
-  background: -webkit-linear-gradient(left, rgba(0,0,0,0), #333333, rgba(0,0,0,0));
-  background: -moz-linear-gradient(left, rgba(0,0,0,0), #333333, rgba(0,0,0,0));
-  background: -o-linear-gradient(left, rgba(0,0,0,0), #333333, rgba(0,0,0,0));
-  background: linear-gradient(left, rgba(0,0,0,0), #333333, rgba(0,0,0,0));
-  border: 0;
-}
-hr.divide:after { 
-  display: block; 
-  content:'';
-  height: 30px;
-
-  background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 116, color-stop(0%, #cccccc), color-stop(100%, rgba(255, 255, 255, 0)));
-  background-image: -webkit-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
-  background-image: -moz-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
-  background-image: -o-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
-  background-image: radial-gradient(farthest-side at center top, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
-}
-
-// .main-nav:after { 
-//   display: block; 
-//   content:'';
-//   height: 30px;
-
-//   background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 116, color-stop(0%, #cccccc), color-stop(100%, rgba(255, 255, 255, 0)));
-//   background-image: -webkit-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
-//   background-image: -moz-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
-//   background-image: -o-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
-//   background-image: radial-gradient(farthest-side at center top, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
-// }

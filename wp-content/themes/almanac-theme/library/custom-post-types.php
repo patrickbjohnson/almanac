@@ -105,14 +105,14 @@ function dish_taxonomy() {
 	$rewrite = array(
 		'slug'                       		=> 'course',
 		'with_front'                 	=> true,
-		'hierarchical'               		=> false,
+		'hierarchical'               	=> false,
 	);
 	$args = array(
 		'labels'                     		=> $labels,
-		'hierarchical'               		=> true,
+		'hierarchical'               	=> true,
 		'public'                     		=> true,
 		'show_ui'                    	=> true,
-		'show_admin_column'          	=> true,
+		'show_admin_column'          => true,
 		'show_in_nav_menus'         	=> true,
 		'rewrite'                   	 	=> $rewrite,
 	);

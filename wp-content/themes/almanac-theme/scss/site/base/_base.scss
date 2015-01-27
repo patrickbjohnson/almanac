@@ -5,6 +5,12 @@ html, body {
 .container {
 	padding-top: 55px;
 	@media (min-width: 800px){
+		padding-top: 72px;
+	}
+	@media (min-width: 960px){
+		padding-top: 78px;
+	}
+	@media (min-width: 1000px){
 		padding-top: 82px;
 	}
 }
@@ -75,9 +81,10 @@ ul {
 		right: 0;
 	}
 
-	p {
+	p:last-child {
 		margin-bottom: 0;
 	}
+	.page-divide {margin-bottom: 20px;}
 }
 
 hr.style-two { 

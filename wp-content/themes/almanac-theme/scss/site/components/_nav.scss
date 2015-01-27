@@ -75,23 +75,7 @@
 .site-nav {
   display: block;
   position: relative;
-  // overflow: hidden;
-  // &:after {
-  //   content: "";
-  //   display: block;
-  //   margin: auto;
-  //   width: 300px;
-    // -webkit-box-shadow: 0 8px 6px -6px black;
-    //    -moz-box-shadow: 0 8px 6px -6px black;
-    //           box-shadow: 0 8px 6px -6px black;
-              background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 75%);
-              background: -webkit-gradient(radial, center center, 0px, center center, 75%, color-stop(0%,rgba(0,0,0,0.1)), color-stop(75%,rgba(0,0,0,0)));
-              background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
-              background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
-              background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
-              background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
-     // background-image: radial-gradient(center 0, circle farthest-corner, rgba(255,255,255,0.4), rgba(255,255,255,0));
-  }
+}
   
 
 @media (min-width: 800px){
@@ -111,14 +95,14 @@
    // left nav
    .nav-left {
     float: left; margin-right: 10px;
-    ul {float: right; margin-right: 35px;}
+    ul {float: right; margin-right: 25px;}
     li {float: left;}
     a {padding: 25px 15px 25px 0;}
    }
    // nav right
    .nav-right {
     float: right; 
-    ul {float: left; margin-left: 35px;}
+    ul {float: left; margin-left: 25px;}
     li {float: left;}
     a {padding: 25px 0 25px 15px;}
    }

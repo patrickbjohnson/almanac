@@ -1,9 +1,9 @@
 .team-name {
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	text-transform: uppercase;
 }
 .team-title {
-	font-style: italic; 
+	font-family: $italic;
 	color: map-get($colors, 'red');
 	text-transform: capitalize;
 	
@@ -18,7 +18,7 @@
 
 	.team-title {
 		display: inline-block;
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 	}
 }
 
@@ -39,7 +39,7 @@
 .staff {
 	margin: 5px 0;
 	@media #{$medium-up}{ 
-		margin-bottom: 50px;
+		margin-bottom: 35px;
 	}
 	
 }

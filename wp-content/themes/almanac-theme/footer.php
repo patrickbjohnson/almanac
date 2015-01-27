@@ -8,30 +8,33 @@
 	
 	<div class="row">
 		<div class="small-12 medium-centered medium-6 large-centered large-6 columns">
+			<?
+			$location = get_field('almanac_google_map', 'option');
+			$marker 	 = get_field('almanac_restaurant_marker', 'option');
+			$locationString = $location['address'];
+			$address = explode(',', $locationString);
+			?>
+			<div itemscope itemtype="http://schema.org/Restaurant">
+			   <!-- <span class="fn org"></span>  -->
+			     <div class="adr" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"> 
+			        <span itemprop="streetAddress"><?php echo $address[0];?></span>
+			        <span itemprop="addressLocality"><?php echo $address[1];?></span>, <span itemprop="addressRegion"><?php echo $address[2];?></span><a class="map" href="http://maps.google.com/?q=<?php echo $location['address'];?>" target="_blank">{Map}</a>
+			     </div> 
+			     <div class="contact">
+			     	<a class="email" href="mailto:<?php the_field('almanac_restaurant_email', 'option');?>"><?php the_field('almanac_restaurant_email', 'option');?></a>
+			     	P:<a class="tel" href="tel:+2122551795"><?php the_field('almanac_restaurant_phone', 'option');?></a>
+					F:<a class="fax" href="fax:+2122551720"><?php the_field('almanac_restaurant_fax', 'option');?></a>				
+			     </div>
+			</div>
+
+
+
+
 			<ul class="ss-social">
 				<li><a href="http://www.twitter.com/<?php the_field('twitter', 'option'); ?>"><span class="icon-facebook"></span></a></li>
 				<li><a href="http://www.instagram.com/<?php the_field('instagram', 'option'); ?>"><span class="icon-instagram"></span></a></li>
 				<li><a href="http://www.facebook.com/<?php the_field('facebook', 'option'); ?>"><span class="icon-twitter"></span></a></li>
 			</ul>
-			<div itemscope itemtype="http://schema.org/Restaurant">
-			  <span itemprop="name"><?php bloginfo( 'name' )?> </span>
-			  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-			    <span itemprop="streetAddress">28 Seventh Avenue South</span>
-			    <span itemprop="addressLocality">New York</span>,
-			    <span itemprop="addressRegion">NY</span> <span itemprop="postalCode">10014</span>
-			  </div>
-			  <div>
-			  	<a itemprop="url" href="http://www.almanacnyc.com">almanacnyc.com</a>
-			  </div>
-			  <div>
-			  	T: <span class="contact" itemprop="telephone">212-255-1795</span>
-			  	F: <span class="contact" itemprop="faxNumber">212-255-1795</span>
-			  	
-			  </div>
-			 
-			  
-			  
-			</div>
 		</div>
 	</div>
 

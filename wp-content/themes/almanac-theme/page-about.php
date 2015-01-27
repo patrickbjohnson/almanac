@@ -10,7 +10,7 @@
 <?php while (have_posts()) : the_post(); ?>
 	<section class="full color page-intro about center">
 		<div class="row">
-			<div class="small-12 medium-12 large-12 columns">
+			<div class="small-12 medium-10 medium-centered large-10 large-centered columns">
 				<header class="section-header">
 					<h1><?php the_title();?></h1>
 					<hr class="page-divide hr-small hr-light">
@@ -84,7 +84,6 @@
 			$marker 	 = get_field('almanac_restaurant_marker', 'option');
 			$locationString = $location['address'];
 			$address = explode(',', $locationString);
-			var_dump();
 			if( !empty($location) ):?>
 			<div class="acf-map">
 				<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>" data-marker="<?php echo $marker;?>"></div>

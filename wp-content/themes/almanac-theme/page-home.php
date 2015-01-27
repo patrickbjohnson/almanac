@@ -9,16 +9,16 @@
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post(); ?>
 	<section class="slider">
-		<a class="small-link" href="#about">Scroll Down</a>
+		<a class="small-link" href="#reserve">Scroll Down</a>
 		<?php the_field('image_slider');?>	
 	</section>
 	
 
-	<section class="full color center">
+	<section class="full color center" >
 		<div class="arrow-down"></div>
 		<div class="row">
 			<div class="small-12 medium-centered medium-10  large-centered large-10 columns">
-				<a class="button btn-reserve" href="<?php echo get_field('reservation_url');?>" target="_blank"><span class="icon-calendar"></span>Reserve Now</a>
+				<a class="button btn-reserve" id="reserve" href="<?php echo get_field('reservation_url');?>" target="_blank"><span class="icon-calendar"></span>Reserve Now</a>
 				<?php 
 				$location = get_field('almanac_google_map', 'option');
 				$marker 	 = get_field('almanac_restaurant_marker', 'option');

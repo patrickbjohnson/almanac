@@ -597,21 +597,21 @@
 
 .ms-skin-default .ms-nav-next,
 .ms-skin-default .ms-nav-prev {
-	width: 30px;
+	width: 95px;
 	background: url(skins/light-skin-1.png);
-	background-position: -89px -26px;
-	height: 40px;
+	background-position: 0 0;
+	height: 95px;
 	cursor: pointer;
 	top: 50%;
 	left: 30px;
-	margin-top: -20px;
+	margin-top: -50px;
 	position: absolute;
 	z-index: 110;
 }
 .ms-skin-default .ms-nav-next {
 	right: 30px;
 	left: auto;
-	background-position: -89px -103px;
+	background-position: -100px -95px;
 }
 
 
@@ -735,7 +735,7 @@ only screen and (                min-resolution: 2dppx) {
 	.ms-skin-default .ms-nav-prev,
 	.ms-skin-default .ms-bullet{
 		background-image:url(skins/light-skin-1-retina.png);
-		background-size: 152px 225px;
+		/*background-size: 152px 225px;*/
 	}
 	
 }

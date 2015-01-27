@@ -1,6 +1,11 @@
 $(document).ready(function(){
+	if(!Modernizr.svg) {
+	    $('img[src*="svg"]').attr('src', function() {
+	        return $(this).attr('src').replace('.svg', '.png');
+	    });
+	}
 	$(window).resize(function(){
-		if ($(window).width() > 800){
+		if ($(window).width() > 799){
 			$('.site-nav').css({'display': 'block'});
 		} else {
 			$('.site-nav').css({'display': 'none'});
@@ -13,7 +18,7 @@ $(document).ready(function(){
 	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 	      if (target.length) {
 	        $('html,body').animate({
-	          scrollTop: target.offset().top
+	          scrollTop: target.offset().top - 100
 	        }, 1000);
 	        return false;
 	      }

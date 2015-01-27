@@ -1,6 +1,3 @@
-.wordmark {
-  // max-width: 200px;
-}
 .footer {
   margin-top: 25px;
   padding-bottom: 25px;
@@ -23,8 +20,9 @@
     }
   }
 }
-.footer .ss-social li {
-  display: inline-block;
+.ss-social {
+  margin-top: 5px;
+  li {display: inline-block;}
   a {
     display: block;
     font-size: 1.250em;
