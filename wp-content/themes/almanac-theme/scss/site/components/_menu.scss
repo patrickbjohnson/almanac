@@ -1,6 +1,12 @@
 .page-template-page-menu hr {margin-bottom: 15px;}
 .food-menu {padding-bottom: 10px;}
 
+.menu-column:nth-child(odd){
+	border-right: 1px solid map-get($colors, 'black');
+	border-left: 1px solid map-get($colors, 'black');
+	min-height: 350px;
+	margin-bottom: 40px;
+}
 .menu-header {
 	margin-bottom: 15px; 
 	h1 {

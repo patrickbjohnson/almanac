@@ -26,8 +26,6 @@ require_once('library/entry-meta.php');
 // Enqueue scripts
 require_once('library/enqueue-scripts.php');
 
-
-
 // Add theme support
 require_once('library/theme-support.php');
 
@@ -43,5 +41,6 @@ require_once('library/options.php');
 // Enqueue Styles
 require_once('library/enqueue-styles.php');
 
+require_once('library/menu-sort.php')
 
 ?>

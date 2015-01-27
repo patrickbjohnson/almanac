@@ -78,3 +78,7 @@
   input.error:-ms-input-placeholder {color: map-get($colors, 'alert');}   // Internet Explorer 10
 
 }
+
+.wpcf7-response-output {
+  text-align: center;
+}
