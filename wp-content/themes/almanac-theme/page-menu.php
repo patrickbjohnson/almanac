@@ -25,7 +25,7 @@
 <?php menu_builder(); ?>
 
  
-<section class="food-menu menu-footer menu-notice center">
+<section class="menu-footer menu-notice center">
 	<p class="alert">We welcome any substitutions and happily allow all dishes to be enjoyed Ã¡ la carte.</p>
 </section>
  

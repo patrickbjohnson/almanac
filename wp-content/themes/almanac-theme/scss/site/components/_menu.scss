@@ -1,6 +1,10 @@
-.page-template-page-menu hr {margin-bottom: 15px;}
-.food-menu {padding-bottom: 10px;}
+.page-template-page-menu hr {
+	margin-bottom: 15px;
+	&:last-of-type {display: none;}
+}
 
+// .food-menu {background: red;}
+// section.food-menu::nth-last-child(2) {background: blue !important;}
 .menu-column:nth-child(odd){
 	border-right: 1px solid map-get($colors, 'black');
 	border-left: 1px solid map-get($colors, 'black');

@@ -31,7 +31,7 @@ function menu_builder( $post_type = 'almanac_dish' ){
 						echo '<span>' . esc_attr($data['price']) . '</span>';
 					}
 					echo '</header>';
-				echo '</div>';
+				
 				
 				// if we are in 3-course 
 				if ($slug == '3-course'){
@@ -56,6 +56,7 @@ function menu_builder( $post_type = 'almanac_dish' ){
 						 	endif;
 						 echo '</div>';		  	
 					}
+				echo '</div>';
 				} else {
 					if ($slug == $slug) {
 						foreach (sort_dish_terms('dish_type') as $key => $value) {
