@@ -59,7 +59,7 @@
 						<li><a href="<?php bloginfo('url');?>" class="small-link">Home</a></li>
 					</ul>
 				</div>
-				<a class="logo small mobile-logo" href="<?php bloginfo('url');?>">Alamanac</a>
+				<a class="logo small mobile-logo" href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a>
 			</div>
 		</div>
 	</div>
