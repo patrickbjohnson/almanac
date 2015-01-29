@@ -81,7 +81,9 @@ function menu_builder( $post_type = 'almanac_dish' ){
 					} 
 				}
 			echo '</section>';
-		echo '<hr class="page-divide hr-large hr-dark">';
+
+			// echo '<img class="menu-divide" src="' . get_bloginfo('template_directory') . '/img/divider-large-dark.svg">';
+			echo '<div class="menu-divide page-divide hr-large hr-dark"></div>';
 		}
 	}
 }

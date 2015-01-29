@@ -3,40 +3,38 @@
   border: none;
   text-align: center;
   display: block;
-  margin: auto;
-  margin: 15px auto 25px;
-  border-top: 1px solid;
-  &:after {
-    content: "\e604";
-    font-family: 'icomoon';
-    display: inline-block;
-    position: relative; 
-    top: -14px;  
-    font-size: em(12px);
-    padding: 0 .750em;
-  }
+  margin: 15px auto;
+  height: 15px;
 }
 
 .hr-large {width: 90%;}
 .hr-small {width: 100px;}
 
-.hr-light {
-  border-color:map-get($colors, 'white');
-  &:after {
-    background: map-get($colors, 'red');
+hr.hr-small.hr-dark {
+  background: map-get($colors, 'white') url('../img/divider-small-dark.png') no-repeat;
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+      background: url('../img/divider-small-dark.svg') no-repeat;
+  }
+}
+hr.hr-small.hr-light {
+  background: map-get($colors, 'red') url('../img/divider-small-light.png') no-repeat;
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+      background: url('../img/divider-small-light.svg') no-repeat;
   }
 }
 
-.hr-dark {
-  border-color: map-get($colors, 'black');
-  color: map-get($colors, 'red');
-  &:after {
-    background: map-get($colors, 'white');
+hr.hr-large.hr-dark {
+  background: map-get($colors, 'white') url('../img/divider-large-dark.png') no-repeat;
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+      background: url('../img/divider-large-dark.svg') no-repeat;
   }
 }
-
-
-
+hr.hr-large.hr-light {
+  background: map-get($colors, 'red') url('../img/divider-large-light.png') no-repeat;
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+      background: url('../img/divider-large-light.svg') no-repeat;
+  }
+}
 
 header.section-header {
   display: block;
@@ -64,3 +62,20 @@ hr.section-divide {
     background-image: radial-gradient(farthest-side at center top, #E8E8E8 0%, rgba(255, 255, 255, 0) 85%);
   }
 }
+
+
+hr.hr-large.hr-dark.menu-divide {
+  background: map-get($colors, 'red') url('../img/divider-small-dark.png') no-repeat;
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+      background: url('../img/divider-small-dark.svg') no-repeat;
+  }
+}
+
+
+.menu-divide,
+.menu-divide img {
+  display: block;
+  margin: auto;
+}
+.menu-divide {margin-bottom: 15px;}
+.container .menu-divide:last-of-type {display: none;}

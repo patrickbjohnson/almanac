@@ -13,7 +13,6 @@
 		<?php the_field('image_slider');?>	
 	</section>
 	
-
 	<section class="full color center" >
 		<div class="arrow-down"></div>
 		<div class="row">

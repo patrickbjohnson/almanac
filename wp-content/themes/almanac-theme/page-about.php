@@ -31,8 +31,8 @@
 <section class="full team center">
 	<div class="row">
 		<header class="section-header">
-				<h1>Our Team</h1>
-				<hr class="page-divide hr-small hr-dark">
+			<h1>Our Team</h1>
+			<hr class="page-divide hr-small hr-dark">
 		</header>
 		<?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>	
 			<?php if( has_term('head-chef', 'staff_role')) :?>

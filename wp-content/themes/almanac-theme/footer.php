@@ -4,7 +4,7 @@
 	<div class="logo">
 		<img class="wordmark" src="<?php bloginfo('template_directory'); ?>/img/almanac-wordmark.svg" alt="">	
 	</div>
-	<hr class="page-divide hr-large hr-dark">
+	<div class="page-divide hr-large hr-dark"></div>
 	
 	<div class="row">
 		<div class="small-12 medium-centered medium-6 large-centered large-6 columns">
@@ -27,10 +27,7 @@
 			     </div>
 			</div>
 
-
-
-
-			<ul class="ss-social">
+			<ul class="social-links">
 				<li><a href="http://www.twitter.com/<?php the_field('twitter', 'option'); ?>"><span class="icon-facebook"></span></a></li>
 				<li><a href="http://www.instagram.com/<?php the_field('instagram', 'option'); ?>"><span class="icon-instagram"></span></a></li>
 				<li><a href="http://www.facebook.com/<?php the_field('facebook', 'option'); ?>"><span class="icon-twitter"></span></a></li>
