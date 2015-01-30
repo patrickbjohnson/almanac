@@ -21,12 +21,14 @@
 	</div>
 </section>
 
+<section class="menu-list center">
+	<?php menu_builder(); ?>	
+</section>
 
-<?php menu_builder(); ?>
-
+<h1><?php ;?></h1>
  
 <section class="menu-footer menu-notice center">
-	<p class="alert">We welcome any substitutions and happily allow all dishes to be enjoyed Ã¡ la carte.</p>
+	<p class="alert"><?php the_field('menu_notice_message');?></p>
 </section>
  
 <?php get_footer();?>

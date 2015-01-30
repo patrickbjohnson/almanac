@@ -61,7 +61,8 @@
 
 
 @import "site/base/base"; 
-@import "site/base/typography"; 
+@import "site/base/typography";
+@import "site/base/test";  
 
 // buttons
 @import "site/components/_button.config"; 
@@ -73,15 +74,21 @@
 
 
 @import "site/components/nav"; 
-@import "site/sections/press"; 
-@import "site/components/menu";
-@import "site/components/staff"; 
 
+@import "site/components/menu";
+
+@import "site/components/footer";
+
+@import "site/sections/press"; 
 @import "site/sections/home-page"; 
-@import "site/sections/footer"; 
 @import "site/sections/shame"; 
+// @import "site/sections/footer"; 
+
 
 @import "site/pages/gallery-page"; 
+
+@import "site/components/staff";
+
 
 .ms-slide-layers {
 	width: 100% !important;

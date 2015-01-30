@@ -59,10 +59,10 @@
 
 	&--title {
 		margin-bottom: 5px;
-		font-size: em(20px);
+		font-size: em(18px);
 		text-transform: uppercase;
-		@media #{$medium-up} {font-size: em(22px);}
-		@media #{$large-up} {font-size: em(26px);}
+		@media #{$medium-up} {font-size: em(20px);}
+		@media #{$large-up} {font-size: em(22px);}
 	}
 
 	&--description p {

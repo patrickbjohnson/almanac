@@ -1,11 +1,10 @@
 
 </div>
-<footer class="footer full center">
+<div class="footer center">
 	<div class="logo">
 		<img class="wordmark" src="<?php bloginfo('template_directory'); ?>/img/almanac-wordmark.svg" alt="">	
 	</div>
-	<div class="page-divide hr-large hr-dark"></div>
-	
+	<div class="footer-divide"></div>
 	<div class="row">
 		<div class="small-12 medium-centered medium-6 large-centered large-6 columns">
 			<?
@@ -26,7 +25,6 @@
 					F:<a class="fax" href="fax:+2122551720"><?php the_field('almanac_restaurant_fax', 'option');?></a>				
 			     </div>
 			</div>
-
 			<ul class="social-links">
 				<li><a href="http://www.twitter.com/<?php the_field('twitter', 'option'); ?>"><span class="icon-facebook"></span></a></li>
 				<li><a href="http://www.instagram.com/<?php the_field('instagram', 'option'); ?>"><span class="icon-instagram"></span></a></li>
@@ -34,10 +32,11 @@
 			</ul>
 		</div>
 	</div>
+</div>
+	
+	
 
-	<?php dynamic_sidebar("footer-widgets"); ?>
 
-</footer>
 
 <?php wp_footer(); ?>
 

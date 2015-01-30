@@ -1,5 +1,6 @@
 .wpcf7-form {
   text-transform: uppercase;
+  textarea {padding: 15px;}
 
   input,
   .wpcf7-not-valid-tip {text-transform: initial;}
@@ -17,20 +18,38 @@
   input[type="tel"], 
   input[type="time"], 
   input[type="url"], 
+  input[type="color"] {
+    height: 50px; 
+    padding: 10px 15px;
+  }
+
+
+
+
+  input[type="text"], 
+  input[type="password"], 
+  input[type="date"], 
+  input[type="datetime"], 
+  input[type="datetime-local"], 
+  input[type="month"], 
+  input[type="week"], 
+  input[type="email"], 
+  input[type="number"], 
+  input[type="search"], 
+  input[type="tel"], 
+  input[type="time"], 
+  input[type="url"], 
   input[type="color"], 
   textarea {
-    padding: 25px 15px;
+    // padding: 25px 15px;
     font-size: em(18px);
     background: map-get($colors, 'gray');
     border: 0;
-    // border: 1px solid map-get($colors, 'black');
     margin-top: 5px;
     margin-bottom: 30px;
   }
 
-  textarea {
-    padding: 10px 15px;
-  }
+  
 
   input[type="text"]:focus, 
   input[type="password"]:focus, 

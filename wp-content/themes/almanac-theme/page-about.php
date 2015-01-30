@@ -56,7 +56,7 @@
 			<?php endif;?>
 		<?php endwhile ;endif; ?>
 	</div>	
-	<hr class="page-divide hr-large hr-dark">
+	<div class="menu-divide"></div>
 	<div class="row">
 		<?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>	
 			<?php if( has_term('staff', 'staff_role')) :?>

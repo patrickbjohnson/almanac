@@ -41,28 +41,32 @@ ul {
 	.row h1 {color: map-get($colors, 'white');}
 }
 
+@media(min-width: 400px){
+	
+	.home .master-slider-parent:before {
+		content: "";
+		position: absolute;
+	    width: 50%;
+	    left: 0;
+	    bottom: 0;
+	    border-bottom: 50px solid map-get($colors, 'red');
+	    border-right: 50px solid transparent;
+	    z-index: 10;
+	}
 
-.home .master-slider-parent:before {
-	content: "";
-	position: absolute;
-    width: 50%;
-    left: 0;
-    bottom: 0;
-    border-bottom: 50px solid map-get($colors, 'red');
-    border-right: 50px solid transparent;
-    z-index: 10;
+	.home .master-slider-parent:after {
+		content: "";
+		position: absolute;
+	    left: 50%;
+	    bottom: 0;
+	    right: 0;
+	    border-bottom: 50px solid map-get($colors, 'red');
+	    border-left: 50px solid transparent;
+	    z-index: 10;
+	}
 }
 
-.home .master-slider-parent:after {
-	content: "";
-	position: absolute;
-    left: 50%;
-    bottom: 0;
-    right: 0;
-    border-bottom: 50px solid map-get($colors, 'red');
-    border-left: 50px solid transparent;
-    z-index: 10;
-}
+
 
 .page-intro {
 	margin-bottom: 50px;

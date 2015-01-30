@@ -1,28 +1,37 @@
 .slider {position: relative; text-align: center;}
+.almanac-overlay {
+	display: none !important;
+	@media(min-width: 400px){
+		display: block !important;
+	}
+}
 .slider .small-link {
 	display: none;
-	position: absolute;
-	bottom: 30px;
-	left: 0;
-	right: 0;
-	// display: inline-block;
-	width: 200px;
-	margin: auto;
-	z-index: 10;
-	text-transform: uppercase;
-	font-size: em(20px);
-	color: map-get($colors, 'white');
-	@media(min-width: 800px){
+
+	@media(min-width: 400px){
 		display: block;
+		position: absolute;
+		bottom: 30px;
+		left: 0;
+		right: 0;
+		display: inline-block;
+		width: 170px;
+		margin: auto;
+		z-index: 10;
+		text-transform: uppercase;
+		font-size: em(20px);
+		color: map-get($colors, 'white');
 	}
-	
 	&:after {
 		content: "";
-		display: block;
-		width: 41px;
-		height: 21px;
-		margin: 10px auto 0;
-		background: url('../img/down-arrow.svg') no-repeat;
+		display: none;
+		@media(min-width: 400px){
+			display: block;
+			width: 41px;
+			height: 21px;
+			margin: 10px auto 0;
+			background: url('../img/down-arrow.svg') no-repeat;
+		}
 	}
-
 }
+
