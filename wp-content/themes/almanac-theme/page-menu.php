@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Menu Page
+ * Template Name: Menu
  * Description: Almanac Menu Page Template Layout
  */
 ?>
@@ -24,13 +24,11 @@
 <section class="menu-list center">
 	<?php menu_builder(); ?>	
 </section>
-
-<h1><?php ;?></h1>
  
 <section class="menu-footer menu-notice center">
-	<p class="alert"><?php the_field('menu_notice_message');?></p>
+	<?php while (have_posts()) : the_post(); ?>
+		<p class="alert"><?php the_field('menu_notice_message');?></p>
+	<?php endwhile ;?>
 </section>
  
 <?php get_footer();?>
- 
-<?php

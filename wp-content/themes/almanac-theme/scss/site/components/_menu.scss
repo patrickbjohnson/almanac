@@ -1,17 +1,9 @@
-// .page-template-page-menu hr {
-// 	margin-bottom: 15px;
-// 	&:last-of-type {display: none;}
-// }
-
-// .food-menu {background: red;}
-// section.food-menu::nth-last-child(2) {background: blue !important;}
 .menu-column:nth-child(odd){
 	@media #{$medium-up}{
 		border-right: 1px solid map-get($colors, 'black');
 		border-left: 1px solid map-get($colors, 'black');
 		min-height: 350px;
 	}
-	
 }
 .menu-header {
 	margin-bottom: 15px; 
@@ -81,7 +73,8 @@
   }
 }
 
-.menu-footer P {
+.menu-footer p {
+	margin-bottom: 0;
 	color: map-get($colors, 'red');
 }
 
