@@ -5,6 +5,7 @@
   background: map-get($colors, 'white');
   text-align: center;
   @media (min-width: 800px){overflow: hidden;}
+
   // styles for mobile nav anchor
   .small-link {
     display: block;
@@ -40,6 +41,7 @@
       display: block;  
     }
   }
+
   // large nav logo 
   .large.logo {
     position: absolute;
@@ -55,12 +57,14 @@
       display: block;
     }
   }
+
   // unordered list of nav elements
   ul {
     margin: 0;
     list-style: none;
     text-align: center;
   }
+
   // nav links
   a {
     display: block;
@@ -77,7 +81,6 @@
   position: relative;
 }
   
-
 @media (min-width: 800px){
    .nav-list {
     width: 40%;
@@ -92,6 +95,7 @@
      }
      .current-menu-item a {color: map-get($colors, 'red');}
    }
+   
    // left nav
    .nav-left {
     float: left; margin-right: 10px;
@@ -99,6 +103,7 @@
     li {float: left;}
     a {padding: 25px 15px 25px 0;}
    }
+   
    // nav right
    .nav-right {
     float: right; 

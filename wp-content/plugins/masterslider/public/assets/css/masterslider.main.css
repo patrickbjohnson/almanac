@@ -579,7 +579,7 @@
 .ms-skin-default .ms-video-btn{
 	width: 50px;
 	height: 51px;
-	background: url(skins/light-skin-1.png) no-repeat -14px -150px;
+	/*background: url(skins/light-skin-1.png) no-repeat -14px -150px;*/
 	top: 50%;
 	left: 50%;
 	margin: -25px 0 0 -25px;
@@ -588,7 +588,7 @@
 .ms-skin-default .ms-slide .ms-slide-vcbtn {
 	width: 30px;
 	height: 30px;
-	background: url(skins/light-skin-1.png) no-repeat -24px -28px;
+	/*background: url(skins/light-skin-1.png) no-repeat -24px -28px;*/
 	top: 18px;
 	right: 30px;
 }
@@ -598,7 +598,7 @@
 .ms-skin-default .ms-nav-next,
 .ms-skin-default .ms-nav-prev {
 	width: 110px;
-	background: url(skins/light-skin-1.png);
+	/*background: url(skins/light-skin-1.png);*/
 	background-position: -25px 0;
 	height: 110px;
 	cursor: pointer;
@@ -619,7 +619,7 @@
 .ms-skin-default .ms-bullet {
 	width: 10px;
 	height: 10px;
-	background: url(skins/light-skin-1.png) no-repeat;
+	/*background: url(skins/light-skin-1.png) no-repeat;*/
 	margin: 4px;
 	background-position: -34px -117px;
 }
@@ -734,9 +734,9 @@ only screen and (                min-resolution: 2dppx) {
 	.ms-skin-default .ms-nav-next,
 	.ms-skin-default .ms-nav-prev,
 	.ms-skin-default .ms-bullet{
-		background-image:url(skins/light-skin-1-retina.png);
+		/*background-image:url(skins/light-skin-1-retina.png);*/
 		width: 110px;
-		background: url(skins/light-skin-1.png);
+		/*background: url(skins/light-skin-1.png);*/
 		background-position: -25px 0;
 		height: 110px;
 		cursor: pointer;
@@ -3089,4 +3089,50 @@ only screen and (                min-resolution: 2dppx) {
     top: auto;
     bottom: 0;
     background-position: 50% -145px;
+}
+
+
+/* Custom Navigation Arrows for Default Skin */
+.icon-arrow-prev,
+.icon-arrow-next {
+	position: relative;
+	top: 20px;
+	display: none;
+	color: #fff;
+}
+
+.page-template-page-home .icon-arrow-prev,
+.page-template-page-home .icon-arrow-next  {
+	top: 0;
+}
+
+.icon-arrow-prev {text-align: left; margin-left: 15px;}
+.icon-arrow-next {text-align: right; margin-right: 15px;}
+
+
+
+@media(min-width: 400px){
+	.icon-arrow-prev,
+	.icon-arrow-next {
+		display: block;
+		color: #fff;
+		font-size: 3em;
+		
+	}
+		
+
+@media(min-width: 800px){
+	.icon-arrow-prev,
+	.icon-arrow-next {
+		font-size: 4em;
+		
+	}
+}
+
+@media(min-width: 1000px){
+	.icon-arrow-prev,
+	.icon-arrow-next {
+		font-size: 5em;
+		
+	}
 }

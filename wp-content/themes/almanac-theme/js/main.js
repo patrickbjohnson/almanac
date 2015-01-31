@@ -28,9 +28,6 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('.site-nav').slideToggle(400);
 	});
-
-	var realWidth = $(".ms-slide-layers").width();
-	console.log(realWidth);
 });
 
 function render_map( $el ) {

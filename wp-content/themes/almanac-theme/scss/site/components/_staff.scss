@@ -6,7 +6,6 @@
 	font-family: $italic;
 	color: map-get($colors, 'red');
 	text-transform: capitalize;
-	
 }
 
 .head-chef {
@@ -38,10 +37,7 @@
 
 .staff {
 	margin: 5px 0;
-	@media #{$medium-up}{ 
-		margin-bottom: 35px;
-	}
-	
+	@media #{$medium-up}{ margin-bottom: 35px;}	
 }
 
 .about {margin-bottom: 50px;}

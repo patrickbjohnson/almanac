@@ -5,8 +5,3 @@
 @function z($layer){
 	@return map-get($z-layers, $layer);
 }
-
-
-// @function color($color) {
-// 	@return map-get($colors, $color);
-// }

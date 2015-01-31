@@ -1,5 +1,4 @@
 // primary colors
-
 $colors: (
 	red: #630000,
 	white: #fff,
@@ -9,21 +8,13 @@ $colors: (
 	gray: #E5E5E5
 );
 
-$white: #fff;
-$gray: #E6E6E6;
-$light-blue: #83CFF4;
-$c-primary: #83CFF4;      //blue
-$c-secondary: #DE7226;    //orange 
-$t-primary: #00619E;
+// fonts
+$didot: 'Didot W01 Roman', serif;
+$italic : 'Didot W01 Italic', serif;
+$headline: 'Didot W01 Headline', serif;
 
-$d-blue: #00619E;
-$d-blue2: #114069; // used in one place I think. 
-$l-blue1: #028ABF;
-
-.intro-copy h1,
-.finale h1 {
-  color: $white;
-}
+// font sizes 
+$font-size-base: 16px;
 
 // z-index stuffs
 $z-layers: (
@@ -31,7 +22,3 @@ $z-layers: (
 	'base-5': 5,
 	'base-10': 10
 );
-
-
-// font sizes 
-$font-size-base: 16px;

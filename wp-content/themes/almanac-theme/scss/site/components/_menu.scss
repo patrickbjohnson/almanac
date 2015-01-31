@@ -40,9 +40,7 @@
 	margin-bottom: 15px;
 	font-family: $italic;
 	color: map-get($colors, 'red');
-	@media #{$medium-up}{
-		margin-bottom: 35px;
-	}
+	@media #{$medium-up}{margin-bottom: 35px;}
 }
 
 .food-menu-item {
@@ -61,9 +59,7 @@
 		line-height: 1.5;
 		margin-bottom: 5px;
 	}
-
 }
-
 
 .menu-middle {
 	@media #{$medium-up} {

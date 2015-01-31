@@ -1,9 +1,7 @@
 .slider {position: relative; text-align: center;}
 .almanac-overlay {
 	display: none !important;
-	@media(min-width: 400px){
-		display: block !important;
-	}
+	@media(min-width: 400px){display: block !important;}
 }
 .slider .small-link {
 	display: none;

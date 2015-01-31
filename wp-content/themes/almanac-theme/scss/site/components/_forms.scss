@@ -1,3 +1,4 @@
+.wpcf7-response-output {text-align: center;}
 .wpcf7-form {
   text-transform: uppercase;
   textarea {padding: 15px;}
@@ -23,9 +24,6 @@
     padding: 10px 15px;
   }
 
-
-
-
   input[type="text"], 
   input[type="password"], 
   input[type="date"], 
@@ -41,15 +39,12 @@
   input[type="url"], 
   input[type="color"], 
   textarea {
-    // padding: 25px 15px;
     font-size: em(18px);
     background: map-get($colors, 'gray');
     border: 0;
     margin-top: 5px;
     margin-bottom: 30px;
   }
-
-  
 
   input[type="text"]:focus, 
   input[type="password"]:focus, 
@@ -68,7 +63,6 @@
   textarea:focus {
     background: lighten(map-get($colors, 'gray'), 2%);
     border: 0;
-    // border: 1px solid map-get($colors, 'black'); 
     box-shadow: none;
   }
 
@@ -98,6 +92,3 @@
 
 }
 
-.wpcf7-response-output {
-  text-align: center;
-}

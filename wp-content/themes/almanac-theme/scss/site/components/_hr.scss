@@ -42,9 +42,7 @@ header.section-header {
 
 }
 
-.color header.section-header h1 {
-  color: map-get($colors, 'white');
-}
+.color header.section-header h1 {color: map-get($colors, 'white');}
 
 hr.section-divide {
   display: block;

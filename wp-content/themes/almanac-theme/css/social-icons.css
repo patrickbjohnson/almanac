@@ -23,6 +23,14 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-next:before {
+	content: "\e606";
+}
+
+.icon-arrow-prev:before {
+	content: "\e607";
+}
+
 .icon-moons:before {
 	content: "\e605";
 }
