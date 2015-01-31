@@ -1,12 +1,16 @@
 .slider {position: relative; text-align: center;}
 .almanac-overlay {
 	display: none !important;
-	@media(min-width: 400px){display: block !important;}
+	@media(min-width: 800px){
+		display: block !important;
+		margin-left: 50px !important;
+	}
 }
-.slider .small-link {
+.slider .scroll-link{
 	display: none;
 
 	@media(min-width: 400px){
+		position: relative;
 		display: block;
 		position: absolute;
 		bottom: 30px;
@@ -16,20 +20,15 @@
 		width: 170px;
 		margin: auto;
 		z-index: 10;
+		font-family: $didot;
 		text-transform: uppercase;
 		font-size: em(20px);
 		color: map-get($colors, 'white');
 	}
-	&:after {
-		content: "";
-		display: none;
-		@media(min-width: 400px){
-			display: block;
-			width: 41px;
-			height: 21px;
-			margin: 10px auto 0;
-			background: url('../img/down-arrow.svg') no-repeat;
-		}
+
+	.icon-down-arrow {
+		position: relative;
+		display: inline-block;
+		padding: 10px;
 	}
 }
-

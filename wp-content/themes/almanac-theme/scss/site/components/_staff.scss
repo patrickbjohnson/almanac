@@ -21,13 +21,13 @@
 	}
 }
 
-.chefs {
+.chef {
 	margin-bottom: 25px;
 	@media #{$medium-up}{
 		margin-bottom: 0;
 		padding: 25px 0 15px;
 	}
-	&:first-child {
+	&:nth-child(2n+1) {
 		@media #{$medium-up}{
 			border-right: 1px solid map-get($colors, 'black');
 		}

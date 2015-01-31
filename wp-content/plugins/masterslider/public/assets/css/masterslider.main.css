@@ -3103,7 +3103,7 @@ only screen and (                min-resolution: 2dppx) {
 
 .page-template-page-home .icon-arrow-prev,
 .page-template-page-home .icon-arrow-next  {
-	top: 0;
+	top: 5px;
 }
 
 .icon-arrow-prev {text-align: left; margin-left: 15px;}

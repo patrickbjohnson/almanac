@@ -146,6 +146,7 @@ function sort_dish_terms($term = array()){
 		);	
 	}
 	return $data;
+	var_dump($data);
 }
 
 ?>

@@ -27,7 +27,7 @@
  
 <section class="menu-footer menu-notice center">
 	<?php while (have_posts()) : the_post(); ?>
-		<p class="alert"><?php the_field('menu_notice_message');?></p>
+		<p class="alert"><?php esc_attr(the_field('menu_notice_message'));?></p>
 	<?php endwhile ;?>
 </section>
  

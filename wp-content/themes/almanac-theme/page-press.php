@@ -31,10 +31,10 @@
 					<?php 
 					$img = get_field('press_image');?>
 					<div class="small-12 medium-4 large-4 columns press-item">
-						<a class="press-image" href="<?php the_field('press_link');?>">
+						<a class="press-image" href="<?php esc_attr(the_field('press_link'));?>">
 							<img src="<?php echo $img['sizes']['medium']; ?>" alt="">
 						</a>
-						<q cite="<?php the_field('press_link');?>"><?php the_field('press_quote');?></q>
+						<q cite="<?php the_field('press_link');?>"><?php esc_attr(the_field('press_quote'));?></q>
 						<cite><a href="<?php the_field('press_link');?>">- <?php the_title();?></a></cite>	
 					</div>
 					

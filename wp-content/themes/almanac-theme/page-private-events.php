@@ -3,8 +3,6 @@
  * Template Name: Private Events
  * Description: Private Events Page Template Layout
  */
-
-// Code to display Page goes here...
 ?>
 <?php get_header(); ?>
 		<section class="full color page-intro center">
@@ -23,9 +21,8 @@
 		<section>
 			<div class="row">
 				<div class="small-12 medium-10 medium-centered large-10 large-centered columns">
-					<?php the_field('page_slider');?>
+					<?php esc_attr(the_field('page_slider'));?>
 				</div>
 			</div>
 		</section>
-
 <?php get_footer();?>
