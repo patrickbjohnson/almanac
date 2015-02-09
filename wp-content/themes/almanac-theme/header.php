@@ -20,7 +20,7 @@
 		} else {
 			echo wp_title( ' | ', 'false', 'right' ); bloginfo( 'name' );
 		} ?></title>
-		<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/7ac99170-d19e-4fa7-8d98-68308496f559.css"/>
+		<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/af9552f8-a3c6-4c2d-947d-7493cbf67e38.css"/>
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/foundation.css" />
 		<link rel="icon" href="<?php echo get_stylesheet_directory_uri() ; ?>/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">

@@ -26,9 +26,25 @@
 			     </div>
 			</div>
 			<ul class="social-links">
-				<li><a href="http://www.twitter.com/<?php the_field('twitter', 'option'); ?>"><span class="icon-facebook"></span></a></li>
-				<li><a href="http://www.instagram.com/<?php the_field('instagram', 'option'); ?>"><span class="icon-instagram"></span></a></li>
-				<li><a href="http://www.facebook.com/<?php the_field('facebook', 'option'); ?>"><span class="icon-twitter"></span></a></li>
+				<?php 
+				
+				if (!empty(get_field('twitter', 'option'))){
+					echo '<li><a href="http://www.twitter.com/';
+							the_field('twitter', 'option');
+					echo '"><span class="icon-twitter"></span></a></li>';
+				};
+				if (!empty(get_field('instagram', 'option'))){
+					echo '<li><a href="http://www.instagram.com/';
+							the_field('instagram', 'option');
+					echo '"><span class="icon-instagram"></span></a></li>';
+				};
+
+				if (!empty(get_field('facebook', 'option'))){
+					echo '<li><a href="http://www.facebook.com/';
+							the_field('facebook', 'option');
+					echo '"><span class="icon-facebook"></span></a></li>';
+				};
+				?>
 			</ul>
 		</div>
 	</div>
@@ -39,6 +55,7 @@
 
 
 <?php wp_footer(); ?>
+
 
 </body>
 </html>

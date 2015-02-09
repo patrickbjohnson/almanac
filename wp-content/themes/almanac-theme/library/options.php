@@ -2,10 +2,10 @@
 
 	if( function_exists('acf_add_options_page') ) {
 		acf_add_options_page(array(
-				'page_title' 	=> 'Restaruant Settings',
-				'menu_title'	=> 'Restaruant Settings',
+				'page_title' 	=> 'Restaurants Options',
+				'menu_title'	=> 'Restaurants Options',
 				'menu_slug' 	=> 'theme-general-settings',
-				'capability'	=> 'edit_posts',
+				'capability'		=> 'edit_posts',
 				'redirect'		=> false
 			));
 			

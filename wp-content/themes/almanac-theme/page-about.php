@@ -57,14 +57,19 @@
 							if( has_term($slug, 'staff_role')) :
 								$headshot = get_field('chef_picture');
 								echo '<div class="small-12 medium-centered medium-8 large-centerd large-8 columns employee head-chef">';
+								if ( !empty( $headshot ) ) {
 									echo '<img src="' . $headshot['sizes']['large'] . '">';
+								}
 									echo '<h2 class="team-name">';
 										esc_attr(the_title());
 									echo '</h2>';
 									echo '<span class="team-title">';
 										esc_attr(the_field('job_title'));
 									echo '</span>';
+									if ( !empty( the_field('chef_bio') ) ) {
 										esc_attr(the_field('chef_bio'));
+									}
+										
 								echo '</div>';
 							endif;
 					endwhile ; endif; wp_reset_query();

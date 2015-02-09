@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Conact
+ * Template Name: Contact
  * Description: Contact Page Template Layout
  */
 ?>
@@ -24,7 +24,7 @@
 		<section>
 			<div class="row">
 				<div class="small-12 medium-10 medium-centered large-10 large-centered columns">
-					<?php esc_attr(the_field('contact_form'));?>
+					<?php esc_attr(the_field('page_options'));?>
 				</div>
 			</div>
 		</section>

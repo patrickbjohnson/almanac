@@ -21,7 +21,7 @@
 		<section>
 			<div class="row">
 				<div class="small-12 medium-10 medium-centered large-10 large-centered columns">
-					<?php esc_attr(the_field('page_slider'));?>
+					<?php esc_attr(the_field('page_options'));?>
 				</div>
 			</div>
 		</section>
