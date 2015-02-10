@@ -1,0 +1,109 @@
+.menu-header {
+  h1 {text-transform: uppercase;}
+  span {
+    display: block; color: red;
+    &:before,
+    &:after {
+      content: "--";
+      margin: 0 5px;
+    }
+  }
+}
+
+.menu-column:nth-child(odd){
+ @media #{$medium-up}{
+   border-right: 1px solid map-get($colors, 'black');
+   border-left: 1px solid map-get($colors, 'black');
+   min-height: 350px;
+ }
+}
+.menu-header {
+ margin-bottom: 15px; 
+ h1 {
+   margin-bottom: 5px;
+   text-transform: uppercase;
+ }
+
+ span {
+    display: block;
+    margin: auto;
+   font-size: em(18px);
+   color: map-get($colors, 'red');
+   &:before,
+   &:after {
+     content: "--";
+     margin: 0 5px;
+   }
+   @media #{$medium-up}{
+     font-size: em(20px);
+   }
+ }
+}
+
+.menu-section--title {
+ text-transform: uppercase;
+ font-size: em(20px);
+ text-transform: uppercase;
+ @media #{$medium-up} {font-size: em(22px);}
+ @media #{$large-up} {font-size: em(26px);}
+}
+
+.menu-section--subtitle {
+ display: inline-block;
+ margin-top: 5px;
+ margin-bottom: 15px;
+ font-family: $italic;
+ color: map-get($colors, 'red');
+ @media #{$medium-up}{margin-bottom: 35px;}
+}
+
+.food-menu-item {
+ margin-bottom: 15px;
+ padding: 5px 0;
+
+ &-title {
+   margin-bottom: 5px;
+   font-size: em(18px);
+   text-transform: uppercase;
+   @media #{$medium-up} {font-size: em(20px);}
+   @media #{$large-up} {font-size: em(22px);}
+ }
+
+ &--description p {
+   line-height: 1.5;
+   margin-bottom: 5px;
+ }
+}
+
+.menu-middle {
+ @media #{$medium-up} {
+   min-height: 300px;
+     border-right: 1px solid map-get($colors, black);
+   border-left: 1px solid map-get($colors, black);
+  }
+}
+
+.menu-footer p {
+ margin-bottom: 0;
+ color: map-get($colors, 'red');
+}
+
+
+.menu-divide.page-divide.hr-large.hr-dark {
+    position: relative;
+    width: 98%;
+    margin: 25px auto 10px;
+
+    border-top: 1px solid map-get($colors,'black');
+    &:after {
+      content: "\e604";
+      position: relative;
+      display: inline-block;
+      top: -15px;
+      padding: 0 10px;
+      font-family: 'icomoon';
+      font-size: em(12px);
+      background: map-get($colors, 'white');
+      color: map-get($colors, 'red');
+    }
+  }

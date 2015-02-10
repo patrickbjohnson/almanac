@@ -21,7 +21,7 @@
 		</div>
 	</section>
 	
-	<section>
+	<section class="press-section">
 		<?php 
 		$args = array( 'post_type' => 'almanac_press');
 		$loop = new WP_Query( $args );

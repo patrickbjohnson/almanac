@@ -68,24 +68,24 @@
 @import "site/components/_button.config"; 
 @import "site/components/_button"; 
 
+// components
+@import "site/components/nav"; 
 @import "site/components/forms"; 
 @import "site/components/maps"; 
 @import "site/components/hr"; 
+// @import "site/components/staff";
+@import "site/components/menus";
+@import "site/components/press"; 
+
+// sections
+// @import "site/sections/home-page"; 
+// @import "site/pages/gallery-page"; 
 
 
-@import "site/components/nav"; 
-
-@import "site/components/menu";
-
-// @import "site/components/footer";
-
-@import "site/sections/press"; 
-@import "site/sections/home-page"; 
 
 
-@import "site/pages/gallery-page"; 
 
-@import "site/components/staff";
+
 
 
 .ms-slide-layers {

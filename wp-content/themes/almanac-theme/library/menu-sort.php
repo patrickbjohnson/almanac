@@ -44,7 +44,7 @@ function menu_builder( $post_type = 'almanac_dish' ){
 						  			$loop->the_post();
 									if (in_category($slug) && has_term($key, 'dish_type')) : 
 									echo '<div class="food-menu-item">';
-										echo '<h1 class="food-menu-item--title">' ;
+										echo '<h1 class="food-menu-item-title">' ;
 											the_title();
 										echo '</h1>';
 										echo '<div class="food-menu-item--description">';
@@ -66,7 +66,7 @@ function menu_builder( $post_type = 'almanac_dish' ){
 							  			$loop->the_post();
 					  					if (in_category($slug) && has_term($key, 'dish_type')) :
 					  						echo '<div class="food-menu-item">';
-												echo '<h1 class="food-menu-item--title">' ;
+												echo '<h1 class="food-menu-item-title">' ;
 													the_title();
 												echo '</h1>';
 												echo '<div class="food-menu-item--description">';
