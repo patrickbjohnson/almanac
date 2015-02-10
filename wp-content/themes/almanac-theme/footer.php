@@ -49,6 +49,7 @@
 				};
 				?>
 			</ul>
+			<a class="credit" href="http://hammerandnailnyc.com/" target="_blank">Site by: hammer + nail</a>
 		</div>
 	</div>
 </div>

@@ -1,35 +1,3 @@
-.footer {
-	margin-top: 25px;
-  	padding-bottom: 25px; 
-  	.logo  {
-		display: block;
-		margin: 0 auto 10px;
-		width: 250px;
-		img {width: 100%;}
-		@media #{$large-up}{width: 300px;}
-	}
-}
-
-
-.footer-divide {
-  position: relative;
-  width: 98%;
-  height: 20px;
-  margin: 25px auto 0;
-  border-top: 1px solid map-get($colors, 'black');
-  &:after {
-      content: "\e605";
-      position: relative;
-      display: inline-block;
-      top: -15px;
-      padding: 0 10px;
-      font-family: 'icomoon';
-      font-size: em(12px);
-      background: map-get($colors, 'white');
-      color: map-get($colors, 'red');
-    }
-}
-
 .menu-divide {
   position: relative;
   width: 98%;
@@ -83,4 +51,12 @@
 		margin: 10px auto 0;
 		background: url('../img/down-arrow.svg') no-repeat;
 	}
+}
+
+.credit {
+  position: relative;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #ccc;
 }
