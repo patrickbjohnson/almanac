@@ -29,7 +29,7 @@
 	}
 }
 
-.press-item:nth-child(3n+1) {clear:left;}
+.press-item:nth-of-type(3n+1) {clear:left;}
 .press-item:last-child {float: left;}
-.press [class*="column"]+[class*="column"]:last-child,
-.employee[class*="column"]+[class*="column"]:last-child {float: left;}
+.press [class*="column"]+[class*="column"]:last-child {float: left;}
+// .employee[class*="column"]+[class*="column"]:last-child 
