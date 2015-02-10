@@ -12,7 +12,6 @@
 @import "config/settings"; // Default settings file. Uncomment each setting you need to change
 @import "../bower_components/foundation/scss/foundation/components/grid";
 @import "../bower_components/foundation/scss/foundation/components/block-grid";
-@import "../bower_components/foundation/scss/foundation/components/button-groups";
 @import "../bower_components/foundation/scss/foundation/components/buttons";
 @import "../bower_components/foundation/scss/foundation/components/clearing";
 @import "../bower_components/foundation/scss/foundation/components/thumbs";
@@ -35,7 +34,6 @@
 
 @import "site/base/base"; 
 @import "site/base/typography";
-@import "site/base/test";  
 
 // buttons
 @import "site/components/_button.config"; 

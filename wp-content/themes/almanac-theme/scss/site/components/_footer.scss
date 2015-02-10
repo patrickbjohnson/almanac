@@ -1,3 +1,15 @@
+.footer {
+  margin-top: 25px;
+  .logo  {
+    display: block;
+    margin: 0 auto 10px;
+    width: 150px;
+    img {width: 100%;}
+    @media #{$large-up}{width: 200px;}
+  }
+}
+
+.footer-divide,
 .menu-divide {
   position: relative;
   width: 98%;
@@ -15,6 +27,9 @@
       background: map-get($colors, 'white');
       color: map-get($colors, 'red');
     }
+}
+.footer-divide:after {
+  content: "\e605";
 }
 
 .social-links {
@@ -39,10 +54,7 @@
 	text-transform: uppercase;
 	font-size: em(20px);
 	color: map-get($colors, 'white');
-	@media(min-width: 800px){
-		display: block;
-	}
-	
+	@media(min-width: 800px){display: block;}
 	&:after {
 		content: "";
 		display: block;
