@@ -1,0 +1,35 @@
+.employee {margin-bottom: 25px;}
+.staff {margin-bottom: 35px;}
+.head-chef {
+   margin-bottom: 50px;
+  img {
+    display: block;
+    border: 8px solid map-get($colors, 'red');
+    margin-bottom: 15px;
+  }
+}
+
+
+.team-name {
+ margin-bottom: 5px;
+ text-transform: uppercase;
+}
+
+.team-title {
+   font-family: $italic;
+   color: map-get($colors, 'red');
+   text-transform: capitalize;  
+}
+
+.chef:nth-child(2n+1){
+  @media #{$medium-up}{
+    border-right: 1px solid map-get($colors, 'black');
+  }
+}
+
+// .chef:nth-child(2n+1) {
+//   @media #{$medium-up}{
+//        border-right: 1px solid map-get($colors, 'black');
+//      }
+//    }
+// }

@@ -1,0 +1,41 @@
+.ms-slide-layers {
+   width: 100% !important;
+   position: relative !important;
+}
+
+.slider {position: relative; text-align: center;}
+.almanac-overlay {
+ display: none !important;
+ @media(min-width: 800px){
+   display: block !important;
+   margin-left: 50px !important;
+ }
+}
+.slider .scroll-link{
+ display: none;
+
+ @media(min-width: 400px){
+   position: relative;
+   display: block;
+   position: absolute;
+   bottom: 30px;
+   left: 0;
+   right: 0;
+   display: inline-block;
+   width: 170px;
+   margin: auto;
+   z-index: 10;
+   font-family: $didot;
+   text-transform: uppercase;
+   font-size: em(20px);
+   color: map-get($colors, 'white');
+ }
+
+ .icon-down-arrow {
+   position: relative;
+   display: inline-block;
+   padding: 10px;
+ }
+}
+
+.page-template-page-full-gallery .page-divide{margin-bottom: 10px;}
