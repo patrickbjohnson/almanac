@@ -38,6 +38,9 @@ a {
     color: map-get($colors, 'black');
     text-decoration: none;
   }
+  &:active,
+  &:focus,
+  &:visited {color: map-get($colors, 'red');}
 }
 
 .almanac-overlay {

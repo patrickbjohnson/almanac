@@ -39,6 +39,7 @@ ul {
 	background: map-get($colors, 'red');
 	color: map-get($colors, 'white');
 	.row h1 {color: map-get($colors, 'white');}
+	a {color: map-get($colors, 'white'); text-decoration: underline;}
 }
 
 @media(min-width: 400px){
@@ -70,25 +71,28 @@ ul {
 
 .page-intro {
 	margin-bottom: 50px;
-	&:after {
-		content: "";
-		width: 0;
-		height: 40px;
-		border-left: 40px solid transparent;
-		border-right: 40px solid transparent;
-		border-top: 40px solid map-get($colors, 'red');
-		position: absolute;
-		bottom: -40px;
-		margin: auto;
-		display: block;
-		left: 0;
-		right: 0;
-	}
+	
 
 	p:last-child {
 		margin-bottom: 0;
 	}
 	.page-divide {margin-bottom: 20px;}
+	@media (min-width: 800px){
+		&:after {
+			content: "";
+			width: 0;
+			height: 40px;
+			border-left: 40px solid transparent;
+			border-right: 40px solid transparent;
+			border-top: 40px solid map-get($colors, 'red');
+			position: absolute;
+			bottom: -40px;
+			margin: auto;
+			display: block;
+			left: 0;
+			right: 0;
+		}
+	}
 }
 
 hr.style-two { 

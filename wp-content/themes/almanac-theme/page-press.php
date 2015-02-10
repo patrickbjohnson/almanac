@@ -29,13 +29,27 @@
 			<div class="row press">
 				<? while ($loop->have_posts()) : $loop->the_post(); ?>
 					<?php 
-					$img = get_field('press_image');?>
+					$img = get_field('press_image');
+					$link = get_field('press_link');
+					?>
 					<div class="small-12 medium-4 large-4 columns press-item">
-						<a class="press-image" href="<?php esc_attr(the_field('press_link'));?>">
-							<img src="<?php echo $img['sizes']['medium']; ?>" alt="">
-						</a>
+						<?php if (!empty($img) && !empty($link)) :?>
+							<a href="<?php esc_attr(the_field('press_link'));?>">
+								<img class="press-image" src="<?php echo $img['sizes']['medium']; ?>" alt="">
+							</a>
+							
+						<?php elseif (!empty($img)) :?>
+							<img class="press-image" src="<?php echo $img['sizes']['medium']; ?>" alt="">
+						<?php endif; ?>
+
 						<q cite="<?php the_field('press_link');?>"><?php esc_attr(the_field('press_quote'));?></q>
-						<cite><a href="<?php the_field('press_link');?>">- <?php the_title();?></a></cite>	
+						<cite>
+							<?php if ($link) : ?>
+							<a href="<?php the_field('press_link');?>">- <?php the_title();?></a>
+							<?php else :?>
+								- <?php the_title();?>
+							<?php endif; ?>
+						</cite>	
 					</div>
 					
 					
@@ -44,7 +58,7 @@
 			
 		<?php else : ?>
 			<div class="row center">
-				<p>No press to report at this time</p>	
+				<p>No press to report at this time.</p>	
 			</div>
 			
 		<?php endif ;?>

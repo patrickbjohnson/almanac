@@ -27,19 +27,22 @@
 			</div>
 			<ul class="social-links">
 				<?php 
+					$twitter = get_field('twitter', 'option');
+					$facebook = get_field('facebook', 'option');
+					$instagram = get_field('instagram', 'option');
 				
-				if (!empty(get_field('twitter', 'option'))){
+				if (!empty($twitter)){
 					echo '<li><a href="http://www.twitter.com/';
 							the_field('twitter', 'option');
 					echo '"><span class="icon-twitter"></span></a></li>';
 				};
-				if (!empty(get_field('instagram', 'option'))){
+				if (!empty($instagram)){
 					echo '<li><a href="http://www.instagram.com/';
 							the_field('instagram', 'option');
 					echo '"><span class="icon-instagram"></span></a></li>';
 				};
 
-				if (!empty(get_field('facebook', 'option'))){
+				if (!empty($facebook)){
 					echo '<li><a href="http://www.facebook.com/';
 							the_field('facebook', 'option');
 					echo '"><span class="icon-facebook"></span></a></li>';

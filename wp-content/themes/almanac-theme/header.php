@@ -20,6 +20,26 @@
 		} else {
 			echo wp_title( ' | ', 'false', 'right' ); bloginfo( 'name' );
 		} ?></title>
+		<meta name="description" content="NYC's hyper-seasonal restaurant focused on serving dishes with the freshest local ingredients from Chef Galen Zamarra's personal recipe almanac.">
+		<meta name="keywords" content="Restaurant, American, Hyper-seasonal, hyper-seasonal dining, locally sourced, american" />
+		<meta name="author" content="<?php bloginfo('name');?>">
+		<meta property="og:title" content="<?php bloginfo('name');?>" />
+		<meta property="og:site_name" content="<?php bloginfo('name');?>"/>
+		<meta property="og:url" content="<?php bloginfo('url');?>" />
+		<meta property="og:image" content="<?php bloginfo('url');?>/images/facebook.jpg" /> 
+		<meta property="og:description" content="NYC's hyper-seasonal restaurant focused on serving dishes with the freshest local ingredients from Chef Galen Zamarra's personal recipe almanac." />
+		<meta property="fb:app_id" content="377160705793518" />
+		<meta property="og:type" content="restaurant.restaurant" />
+		<meta property="restaurant:contact_info:street_address" content="28 7th Avenue South" /> 
+		<meta property="restaurant:contact_info:locality" content="New York" /> 
+		<meta property="restaurant:contact_info:region" content="New York" /> 
+		<meta property="restaurant:contact_info:postal_code" content="10014" /> 
+		<meta property="restaurant:contact_info:country_name" content="United States" /> 
+		<meta property="restaurant:contact_info:email" content="info@almanacnyc.com" /> 
+		<meta property="restaurant:contact_info:phone_number" content="212-255-1795" /> 
+		<meta property="restaurant:contact_info:website" content="<?php bloginfo('url');?>" /> 
+		<meta property="place:location:latitude" content="40.730559" /> 
+		<meta property="place:location:longitude" content="-74.004658" /> 
 		<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/af9552f8-a3c6-4c2d-947d-7493cbf67e38.css"/>
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/foundation.css" />
 		<link rel="icon" href="<?php echo get_stylesheet_directory_uri() ; ?>/favicon.ico" type="image/x-icon">

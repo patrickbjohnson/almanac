@@ -10,7 +10,7 @@
 <?php while (have_posts()) : the_post(); ?>
 	<section class="slider">
 		<a href="#reserve" class="scroll-link">Scroll Down<span class="icon-down-arrow"></a>
-		<?php esc_attr(the_field('image_slider'));?>	
+		<?php esc_attr(the_field('page_options'));?>	
 	</section>
 	
 	<section class="full color center" >

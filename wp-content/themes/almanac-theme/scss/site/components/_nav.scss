@@ -1,9 +1,11 @@
 .main-nav {
   width: 100%;
   position: fixed;
-  z-index: 100;
+  
   background: map-get($colors, 'white');
+  border-bottom: 1px solid map-get($colors, 'black');
   text-align: center;
+  z-index: 100;
   @media (min-width: 800px){overflow: hidden;}
 
   // styles for mobile nav anchor
@@ -17,7 +19,6 @@
     position: relative;
     font-size: em(24px);
     border-top: 1px solid map-get($colors, 'black');
-    border-bottom: 1px solid map-get($colors, 'black');
     display: block;
     @media(min-width: 800px){
       display: none;
