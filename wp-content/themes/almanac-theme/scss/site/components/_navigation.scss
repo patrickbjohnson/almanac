@@ -24,10 +24,10 @@
       position: absolute;
       box-shadow: 0 0 0 1px map-get($colors, 'red'), 0 7px 0 1px map-get($colors, 'red'), 0 14px 0 1px map-get($colors, 'red');
       width: 20px;
-      margin-top: 15px;
+      margin-top: 14px;
     }
-    &:before {left: 20%;}
-    &:after {right: 20%;}
+    &:before {left: 15%;}
+    &:after {right: 15%;}
   }
 
   // styles for large nav / logo
@@ -104,6 +104,7 @@
     a {padding: 25px 0 25px 15px;}
    }
 }
+.mobile-logo {letter-spacing: .1em;}
 
 @media (min-width: 960px){.nav-list li a {font-size: em(18px)}}
 @media (min-width: 1000px){.nav-list li a {font-size: em(20px)}}
