@@ -50,6 +50,11 @@
 		<script src="<?php echo get_stylesheet_directory_uri() ; ?>/js/vendor/jquery.js"></script>
 		
 		<?php wp_head(); ?>
+		<?php if(is_front_page()) :?>
+			<style>
+				.master-slider-parent {margin-top: -48px;}
+			</style>
+		<?endif; ?>
 	</head>
 	<body <?php body_class(); ?>>
 	

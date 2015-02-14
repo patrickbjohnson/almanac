@@ -2,20 +2,12 @@ html {margin: 0 !important;}
 html, body {-webkit-backface-visibility: hidden;}
 
 .container {
-	margin-top: -39px;
-	@media (min-width: 800px){
-		padding-top: 24px;
-		margin-top: -7px;
-	}
-	@media (min-width: 960px){
-		padding-top: 0;
-		margin-top: -1px;
-	}
-	@media (min-width: 1000px){
-		padding-top: 0;
-		margin-top: 0;
-	}
+	margin-top: 9px;
+	@media (min-width: 800px){margin-top: 41px;}
+	@media (min-width: 960px){margin-top: 47px;}
+	@media (min-width: 1000px){margin-top: 51px;}
 }
+
 section {
 	position: relative;
 	padding: 15px;
