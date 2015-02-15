@@ -32,29 +32,33 @@ function menu_builder( $post_type = 'almanac_dish' ){
 					}
 					echo '</header>';
 				
-				
 				// if we are in 3-course 
 				if ($slug == '3-course'){
 					// for each term that exists within 3-course (app/dessert/main)
 					// this creates a 3 column layout. One column for each term
-					foreach (sort_dish_terms('dish_type') as $key => $value) {
-						 echo '<div class="small-12 medium-4 large-4 menu-column columns">';
-						  	if ($loop->have_posts()) : 
-						  		while ($loop->have_posts()) :  
-						  			$loop->the_post();
-									if (in_category($slug) && has_term($key, 'dish_type')) : 
-									echo '<div class="food-menu-item">';
-										echo '<h1 class="food-menu-item-title">' ;
-											the_title();
-										echo '</h1>';
-										echo '<div class="food-menu-item--description">';
-											the_content();
+					foreach (sort_dish_terms('dish_type') as $key => $value) {										
+						if ( $key == 'appetizer' || $key == 'main' || $key == 'dessert' ) :
+							 echo '<div class="small-12 medium-4 large-4 menu-column columns">';
+							  	if ($loop->have_posts()) : 
+							  		while ($loop->have_posts()) :  
+							  			$loop->the_post();
+										if (in_category($slug) && has_term($key, 'dish_type') ) : 
+											
+										echo '<div class="food-menu-item">';
+											echo '<h1 class="food-menu-item-title">' ;
+												the_title();
+											echo '</h1>';
+											echo '<div class="food-menu-item--description">';
+												the_content();
+											echo '</div>';
 										echo '</div>';
-									echo '</div>';
-						  			endif;	
-						  		endwhile;
-						 	endif;
-						 echo '</div>';		  	
+							  			endif;	
+							  		endwhile;
+							 	endif;
+							 echo '</div>';	
+
+						endif;
+							  	
 					}
 				echo '</div>';
 				} else {
@@ -123,6 +127,7 @@ function sort_menu_terms( $terms = array() ){
 			'slug'	=> $slug
 			// other values can go here
 		);
+
 	} // end foreach
 
 	// bail if no data exists
