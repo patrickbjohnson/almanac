@@ -12,53 +12,30 @@
     color: map-get($colors, 'red');
     font-size: em(18px);
     @media #{$medium-up}{font-size: em(20px);}
-    &:before {
-      content: "--";
-      margin-left: 5px;
-      margin-right: 5px;
-    }
-    &:after {
+    &:before, 
+    &:after  {
       content: "--";
       margin-left: 5px;
       margin-right: 5px;
     }
   }
-  // span {
-  //   display: block;
-  //   color: map-get($colors, 'red');
-  //   &:before,
-  //   &:after {
-  //     content: "--";
-  //     margin: 0 5px;
-  //   }
-  // }
 }
-// .menu-header {
 
-
-//  span {
-//     display: block;
-//     margin: auto;
-//    font-size: em(18px);
-//    color: map-get($colors, 'red');
-//    &:before,
-//    &:after {
-//      content: "--";
-//      margin: 0 5px;
-//    }
-//    @media #{$medium-up}{
-//      font-size: em(20px);
-//    }
-//  }
-// }
-
-.menu-column:nth-child(odd){
- @media #{$medium-up}{
-   border-right: 1px solid map-get($colors, 'black');
-   border-left: 1px solid map-get($colors, 'black');
-   min-height: 350px;
- }
+.menu-column {
+  border-bottom: 1px solid map-get($colors, 'black');
+  margin-bottom: 25px;
+  
+  @media #{$medium-up}{border-bottom: 0; margin-bottom: 0;}
+  &:last-child {border-bottom: 0;}
+  &:nth-child(odd){
+    @media #{$medium-up}{
+       border-right: 1px solid map-get($colors, 'black');
+       border-left: 1px solid map-get($colors, 'black');
+       min-height: 350px;
+     }
+  }
 }
+
 
 
 .menu-section--title {
