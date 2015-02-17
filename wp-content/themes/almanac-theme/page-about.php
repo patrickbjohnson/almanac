@@ -55,7 +55,8 @@
 					if ($slug == 'head-chef'){
 						if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
 							if( has_term($slug, 'staff_role')) :
-								$headshot = get_field('chef_picture');
+								$headshot   = get_field('chef_picture');
+								$bio 		  	= get_fleid('chef_bio');
 								echo '<div class="small-12 medium-centered medium-8 large-centerd large-8 columns employee head-chef">';
 								if ( !empty( $headshot ) ) {
 									echo '<img src="' . $headshot['sizes']['large'] . '">';
@@ -66,7 +67,7 @@
 									echo '<span class="team-title">';
 										esc_attr(the_field('job_title'));
 									echo '</span>';
-									if ( !empty( the_field('chef_bio') ) ) {
+									if ( !empty( $bio ) ) {
 										esc_attr(the_field('chef_bio'));
 									}
 										
@@ -167,7 +168,7 @@
 			     	P:<a class="tel" href="tel:+2122551795"><?php esc_attr(the_field('mas_restaurant_phone', 'option'));?></a>
 					F:<a class="fax" href="fax:+2122551720"><?php esc_attr(the_field('mas_restaurant_fax', 'option'));?></a>				
 			     </div>
-			   		<a class="url" href="<?php esc_attr(the_field('mas_restaurant_site', 'option'));?>" >Mas Farmhouse</a> 
+			   		<a class="url" href="<?php esc_attr(the_field('mas_restaurant_site', 'option'));?>" ><?php esc_attr(the_field('mas_restaurant_name', 'option'));?></a> 
 			</div>
 		</div>
 	</div>
