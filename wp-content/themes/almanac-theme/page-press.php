@@ -34,7 +34,7 @@
 					?>
 					<div class="small-12 medium-4 large-4 columns press-item">
 						<?php if (!empty($img) && !empty($link)) :?>
-							<a href="<?php esc_attr(the_field('press_link'));?>">
+							<a href="<?php esc_attr(the_field('press_link'));?>" target="_blank">
 								<img class="press-image" src="<?php echo $img['sizes']['medium']; ?>" alt="">
 							</a>
 							
