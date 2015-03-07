@@ -19,6 +19,9 @@
 			        <span itemprop="streetAddress"><?php echo $address[0];?></span>
 			        <span itemprop="addressLocality"><?php echo $address[1];?></span>, <span itemprop="addressRegion"><?php echo $address[2];?></span><a class="map" href="http://maps.google.com/?q=<?php echo $location['address'];?>" target="_blank">{Map}</a>
 			     </div> 
+			     <div class="reservations">
+			     	<a href="<?php the_field('reservation_url', 'option');?>"><?php the_field('reservation_message', 'option');?></a>
+			     </div>
 			     <div class="contact">
 			     	<a class="email" href="mailto:<?php the_field('almanac_restaurant_email', 'option');?>"><?php the_field('almanac_restaurant_email', 'option');?></a>
 			     	P:<a class="tel" href="tel:+2122551795"><?php the_field('almanac_restaurant_phone', 'option');?></a>

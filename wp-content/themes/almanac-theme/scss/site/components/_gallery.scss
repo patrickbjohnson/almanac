@@ -1,3 +1,7 @@
+.ms-slide .ms-layer {
+   display: none !important;
+   @media #{$medium-up} {display: block !important;}
+}
 .ms-slide-layers {
    width: 100% !important;
    position: relative !important;
@@ -6,14 +10,13 @@
 .slider {position: relative; text-align: center;}
 .almanac-overlay {
  display: none !important;
- @media(min-width: 800px){
+ @media #{$medium-up} {
    display: block !important;
    margin-left: 50px !important;
  }
 }
 .slider .scroll-link{
  display: none;
-
  @media(min-width: 400px){
    position: relative;
    display: block;

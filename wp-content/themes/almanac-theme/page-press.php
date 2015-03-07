@@ -45,7 +45,7 @@
 						<q cite="<?php the_field('press_link');?>"><?php esc_attr(the_field('press_quote'));?></q>
 						<cite>
 							<?php if ($link) : ?>
-							<a href="<?php the_field('press_link');?>">- <?php the_title();?></a>
+							<a href="<?php the_field('press_link');?>" target="_blank">- <?php the_title();?></a>
 							<?php else :?>
 								- <?php the_title();?>
 							<?php endif; ?>

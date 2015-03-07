@@ -24,9 +24,11 @@
 	<?php menu_builder(); ?>	
 </section>
  
-<section class="menu-footer menu-notice center">
+<section class="menu-footer center">
 	<?php while (have_posts()) : the_post(); ?>
-		<p class="alert"><?php esc_attr(the_field('menu_notice_message'));?></p>
+		<div class="menu-notice alert">
+			<?php esc_attr(the_field('menu_notice_message'));?>	
+		</div>
 	<?php endwhile ;?>
 </section>
  

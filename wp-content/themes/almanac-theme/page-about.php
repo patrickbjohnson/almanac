@@ -55,8 +55,8 @@
 					if ($slug == 'head-chef'){
 						if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
 							if( has_term($slug, 'staff_role')) :
-								$headshot   = get_field('chef_picture');
-								$bio 		  	= get_fleid('chef_bio');
+								$headshot = get_field('chef_picture');
+								$bio = get_field('chef_bio');
 								echo '<div class="small-12 medium-centered medium-8 large-centerd large-8 columns employee head-chef">';
 								if ( !empty( $headshot ) ) {
 									echo '<img src="' . $headshot['sizes']['large'] . '">';
